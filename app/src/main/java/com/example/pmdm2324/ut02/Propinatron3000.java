@@ -1,7 +1,10 @@
 package com.example.pmdm2324.ut02;
 
+import static java.lang.Integer.parseInt;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,10 +44,13 @@ public class Propinatron3000 extends AppCompatActivity {
         rbBuena = findViewById(R.id.u2a2idrbBuena);
         rbExcelente = findViewById(R.id.u2a2idrbExcelente);
 
-        manejador = (View BotonPulsado)->{
-            Button btPulsado = (Button) BotonPulsado;
-            tvCuenta.setText(btPulsado.getText());
+
+
+        manejador = (View botonPulsado1)->{
+            Button btPulsado1 = (Button) botonPulsado1;
+            tvCuenta.setText(btPulsado1.getText().toString());
         };
+
         bt1.setOnClickListener(manejador);
         bt2.setOnClickListener(manejador);
         bt3.setOnClickListener(manejador);
@@ -55,5 +61,32 @@ public class Propinatron3000 extends AppCompatActivity {
         bt8.setOnClickListener(manejador);
         bt9.setOnClickListener(manejador);
         bt0.setOnClickListener(manejador);
+
+        btBorrarTodo.setOnClickListener((View v)->{
+                    tvCuenta.setText("");
+                    tvCuentaPropina.setText("");
+        });
+
+        btGenerarPropina.setOnClickListener((View v)->{
+            double pBuena = 0.10;
+            double pExcelente = 0.15;
+            double Cuenta = 0;
+            double cuentaFinal = 0;
+            if(rbBuena.isChecked()){
+                Cuenta = Double.parseDouble(tvCuenta.getText().toString());
+                cuentaFinal = (Cuenta * pBuena) + Cuenta;
+                String cFinalString = Double.toString(cuentaFinal);
+                tvCuentaPropina.setText(cFinalString);
+            } else if (rbExcelente.isChecked()) {
+                Cuenta = Double.parseDouble(tvCuenta.getText().toString());
+                cuentaFinal = (Cuenta * pExcelente) + Cuenta;
+                String cFinalString = Double.toString(cuentaFinal);
+                tvCuentaPropina.setText(cFinalString);
+            } else if (rbMala.isChecked()) {
+                tvCuentaPropina.setText(tvCuenta.getText().toString());
+            }
+        });
+
+
     }
 }
