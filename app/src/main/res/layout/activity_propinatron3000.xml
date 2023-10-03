@@ -130,7 +130,7 @@
         android:id="@+id/u2a2idbtBorrarUno"
         android:layout_width="53dp"
         android:layout_height="51dp"
-        android:text="<"
+        android:text="r"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.307"
