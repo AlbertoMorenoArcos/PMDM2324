@@ -55,6 +55,7 @@ public class u2a2Coloratron extends AppCompatActivity {
                 }
             }
         });
+       
         btGenerar.setOnClickListener((View v)->{
             int rojo = sbColorRojo.getProgress();
             int verde = sbColorVerde.getProgress();
