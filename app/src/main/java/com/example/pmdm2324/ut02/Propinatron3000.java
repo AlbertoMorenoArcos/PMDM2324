@@ -46,9 +46,18 @@ public class Propinatron3000 extends AppCompatActivity {
 
 
 
-        manejador = (View botonPulsado1)->{
-            Button btPulsado1 = (Button) botonPulsado1;
-            tvCuenta.setText(btPulsado1.getText().toString());
+        manejador = (View botonPulsado)->{
+            Button btPulsado = (Button) botonPulsado;
+            if(btPulsado == btBorrarTodo){
+                tvCuenta.setText("");
+                tvCuentaPropina.setText("");
+            }else if(btPulsado == btBorrarUno){
+                String cuenta = tvCuenta.getText().toString();
+                String cFinal = cuenta.substring(0, (cuenta.length() - 1));
+                tvCuenta.setText(cFinal);
+            } else {
+               tvCuenta.append(btPulsado.getText().toString());
+            }
         };
 
         bt1.setOnClickListener(manejador);
@@ -61,29 +70,26 @@ public class Propinatron3000 extends AppCompatActivity {
         bt8.setOnClickListener(manejador);
         bt9.setOnClickListener(manejador);
         bt0.setOnClickListener(manejador);
-
-        btBorrarTodo.setOnClickListener((View v)->{
-                    tvCuenta.setText("");
-                    tvCuentaPropina.setText("");
-        });
+        btBorrarTodo.setOnClickListener(manejador);
+        btBorrarUno.setOnClickListener(manejador);
 
         btGenerarPropina.setOnClickListener((View v)->{
             double pBuena = 0.10;
-            double pExcelente = 0.15;
+            double pExcelente = 0.20;
             double Cuenta = 0;
             double cuentaFinal = 0;
             if(rbBuena.isChecked()){
                 Cuenta = Double.parseDouble(tvCuenta.getText().toString());
                 cuentaFinal = (Cuenta * pBuena) + Cuenta;
                 String cFinalString = Double.toString(cuentaFinal);
-                tvCuentaPropina.setText(cFinalString);
+                tvCuentaPropina.setText(cFinalString + "€");
             } else if (rbExcelente.isChecked()) {
                 Cuenta = Double.parseDouble(tvCuenta.getText().toString());
                 cuentaFinal = (Cuenta * pExcelente) + Cuenta;
                 String cFinalString = Double.toString(cuentaFinal);
-                tvCuentaPropina.setText(cFinalString);
+                tvCuentaPropina.setText(cFinalString + "€");
             } else if (rbMala.isChecked()) {
-                tvCuentaPropina.setText(tvCuenta.getText().toString());
+                tvCuentaPropina.setText(tvCuenta.getText().toString() + "€");
             }
         });
 
