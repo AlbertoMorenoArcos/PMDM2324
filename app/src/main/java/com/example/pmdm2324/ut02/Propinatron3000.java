@@ -4,6 +4,7 @@ import static java.lang.Integer.parseInt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -16,10 +17,11 @@ import com.example.pmdm2324.R;
 public class Propinatron3000 extends AppCompatActivity {
 
     Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt0, btBorrarUno, btBorrarTodo, btGenerarPropina;
-    TextView tvCuenta, tvCuentaPropina;
+    TextView tvCuenta, tvCuentaPropina, tvError;
     RadioButton rbMala, rbBuena, rbExcelente;
 
     View.OnClickListener manejador;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,7 @@ public class Propinatron3000 extends AppCompatActivity {
         btGenerarPropina = findViewById(R.id.u2a2idbtGenerarPropina);
         tvCuenta = findViewById(R.id.u2a2idtvCuenta);
         tvCuentaPropina = findViewById(R.id.u2a2idtvCuentaPropina);
+        tvError = findViewById(R.id.u2a2idtvError);
         rbMala = findViewById(R.id.u2a2idrbMala);
         rbBuena = findViewById(R.id.u2a2idrbBuena);
         rbExcelente = findViewById(R.id.u2a2idrbExcelente);
@@ -47,17 +50,27 @@ public class Propinatron3000 extends AppCompatActivity {
 
 
         manejador = (View botonPulsado)->{
-            Button btPulsado = (Button) botonPulsado;
-            if(btPulsado == btBorrarTodo){
-                tvCuenta.setText("");
-                tvCuentaPropina.setText("");
-            }else if(btPulsado == btBorrarUno){
-                String cuenta = tvCuenta.getText().toString();
-                String cFinal = cuenta.substring(0, (cuenta.length() - 1));
-                tvCuenta.setText(cFinal);
-            } else {
-               tvCuenta.append(btPulsado.getText().toString());
+            try{
+                tvError.setText("");
+                Button btPulsado = (Button) botonPulsado;
+                if(btPulsado == btBorrarTodo){
+                    tvCuenta.setText("");
+                    tvCuentaPropina.setText("");
+                }else if(btPulsado == btBorrarUno){
+                    String cuenta = tvCuenta.getText().toString();
+                    String cFinal = cuenta.substring(0, (cuenta.length() - 1));
+                    tvCuenta.setText(cFinal);
+                } else {
+                    tvCuenta.append(btPulsado.getText().toString());
+                }
+            }catch(NumberFormatException e1) {
+                tvError.setText("ERROR: No has añadido datos para borrar.");
+            }catch(StringIndexOutOfBoundsException e2){
+                tvError.setText("ERROR: No has añadido datos para borrar.");
+            }catch (Exception e){
+                tvError.setText("ERROR DESCONOCIDO");
             }
+
         };
 
         bt1.setOnClickListener(manejador);
@@ -73,24 +86,33 @@ public class Propinatron3000 extends AppCompatActivity {
         btBorrarTodo.setOnClickListener(manejador);
         btBorrarUno.setOnClickListener(manejador);
 
-        btGenerarPropina.setOnClickListener((View v)->{
-            double pBuena = 0.10;
-            double pExcelente = 0.20;
-            double Cuenta = 0;
-            double cuentaFinal = 0;
-            if(rbBuena.isChecked()){
-                Cuenta = Double.parseDouble(tvCuenta.getText().toString());
-                cuentaFinal = (Cuenta * pBuena) + Cuenta;
-                String cFinalString = Double.toString(cuentaFinal);
-                tvCuentaPropina.setText(cFinalString + "€");
-            } else if (rbExcelente.isChecked()) {
-                Cuenta = Double.parseDouble(tvCuenta.getText().toString());
-                cuentaFinal = (Cuenta * pExcelente) + Cuenta;
-                String cFinalString = Double.toString(cuentaFinal);
-                tvCuentaPropina.setText(cFinalString + "€");
-            } else if (rbMala.isChecked()) {
-                tvCuentaPropina.setText(tvCuenta.getText().toString() + "€");
+        btGenerarPropina.setOnClickListener((View v) -> {
+            try {
+                double pBuena = 0.10;
+                double pExcelente = 0.20;
+                double Cuenta = 0;
+                double cuentaFinal = 0;
+                if (rbBuena.isChecked()) {
+                    Cuenta = Double.parseDouble(tvCuenta.getText().toString());
+                    cuentaFinal = (Cuenta * pBuena) + Cuenta;
+                    String cFinalString = Double.toString(cuentaFinal);
+                    tvCuentaPropina.setText(cFinalString + "€");
+                } else if (rbExcelente.isChecked()) {
+                    Cuenta = Double.parseDouble(tvCuenta.getText().toString());
+                    cuentaFinal = (Cuenta * pExcelente) + Cuenta;
+                    String cFinalString = Double.toString(cuentaFinal);
+                    tvCuentaPropina.setText(cFinalString + "€");
+                } else if (rbMala.isChecked()) {
+                    tvCuentaPropina.setText(tvCuenta.getText().toString() + "€");
+                }
+            }catch(NumberFormatException e1) {
+                tvError.setText("ERROR: No has puesto la cuenta, para añadir la propina.");
+            }catch(StringIndexOutOfBoundsException e2){
+                tvError.setText("ERROR: No has añadido datos para borrar.");
+            }catch (Exception e){
+                tvError.setText("ERROR DESCONOCIDO");
             }
+
         });
 
 
