@@ -7,10 +7,10 @@
     android:layout_height="match_parent"
     android:background="#0B42E8"
     android:backgroundTint="#D50099FF"
-    tools:context=".ut02.Propinatron3000">
+    tools:context=".ut02.u2a3Propinatron3000">
 
     <ImageView
-        android:id="@+id/u2a2idimgTips"
+        android:id="@+id/u2a3idimgTips"
         android:layout_width="407dp"
         android:layout_height="98dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +22,7 @@
         app:srcCompat="@drawable/tips" />
 
     <Button
-        android:id="@+id/u2a2idbtN1"
+        android:id="@+id/u2a3idbtN1"
         android:layout_width="93dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.176" />
 
     <Button
-        android:id="@+id/u2a2idbtN2"
+        android:id="@+id/u2a3idbtN2"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="@color/black"
@@ -44,11 +44,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/u2a2idimgTips"
+        app:layout_constraintTop_toTopOf="@+id/u2a3idimgTips"
         app:layout_constraintVertical_bias="0.175" />
 
     <Button
-        android:id="@+id/u2a2idbtN3"
+        android:id="@+id/u2a3idbtN3"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="@color/black"
@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.175" />
 
     <Button
-        android:id="@+id/u2a2idbtN4"
+        android:id="@+id/u2a3idbtN4"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="@color/black"
@@ -74,7 +74,7 @@
         app:layout_constraintVertical_bias="0.267" />
 
     <Button
-        android:id="@+id/u2a2idbtN5"
+        android:id="@+id/u2a3idbtN5"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="@color/black"
@@ -83,11 +83,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/u2a2idimgTips"
+        app:layout_constraintTop_toTopOf="@+id/u2a3idimgTips"
         app:layout_constraintVertical_bias="0.267" />
 
     <Button
-        android:id="@+id/u2a2idbtN6"
+        android:id="@+id/u2a3idbtN6"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="@color/black"
@@ -100,7 +100,7 @@
         app:layout_constraintVertical_bias="0.267" />
 
     <Button
-        android:id="@+id/u2a2idbtN7"
+        android:id="@+id/u2a3idbtN7"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="@color/black"
@@ -113,7 +113,7 @@
         app:layout_constraintVertical_bias="0.362" />
 
     <Button
-        android:id="@+id/u2a2idbtN8"
+        android:id="@+id/u2a3idbtN8"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="@color/black"
@@ -126,7 +126,7 @@
         app:layout_constraintVertical_bias="0.362" />
 
     <Button
-        android:id="@+id/u2a2idbtN9"
+        android:id="@+id/u2a3idbtN9"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="@color/black"
@@ -139,7 +139,7 @@
         app:layout_constraintVertical_bias="0.362" />
 
     <Button
-        android:id="@+id/u2a2idbtBorrarUno"
+        android:id="@+id/u2a3idbtBorrarUno"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="#FF0000"
@@ -152,7 +152,7 @@
         app:layout_constraintVertical_bias="0.457" />
 
     <Button
-        android:id="@+id/u2a2idbtN0"
+        android:id="@+id/u2a3idbtN0"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="@color/black"
@@ -165,7 +165,7 @@
         app:layout_constraintVertical_bias="0.457" />
 
     <Button
-        android:id="@+id/u2a2idbtBorrarTodo"
+        android:id="@+id/u2a3idbtBorrarTodo"
         android:layout_width="93dp"
         android:layout_height="47dp"
         android:backgroundTint="#FF0000"
@@ -178,7 +178,7 @@
         app:layout_constraintVertical_bias="0.457" />
 
     <TextView
-        android:id="@+id/u2a2idtvCuenta"
+        android:id="@+id/u2a3idtvCuenta"
         android:layout_width="205dp"
         android:layout_height="51dp"
         android:background="#4CAF50"
@@ -189,11 +189,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/u2a2idimgTips"
+        app:layout_constraintTop_toTopOf="@+id/u2a3idimgTips"
         app:layout_constraintVertical_bias="0.548" />
 
     <RadioGroup
-        android:id="@+id/u2a2rgRadioGroup"
+        android:id="@+id/u2a3rgRadioGroup"
         android:layout_width="348dp"
         android:layout_height="47dp"
         android:orientation="horizontal"
@@ -205,26 +205,26 @@
         app:layout_constraintVertical_bias="0.639">
 
         <RadioButton
-            android:id="@+id/u2a2idrbMala"
+            android:id="@+id/u2a3idrbMala"
             android:layout_width="118dp"
             android:layout_height="match_parent"
             android:text="Mala" />
 
         <RadioButton
-            android:id="@+id/u2a2idrbBuena"
+            android:id="@+id/u2a3idrbBuena"
             android:layout_width="109dp"
             android:layout_height="match_parent"
             android:text="Buena" />
 
         <RadioButton
-            android:id="@+id/u2a2idrbExcelente"
+            android:id="@+id/u2a3idrbExcelente"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Excelente" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/u2a2idbtGenerarPropina"
+        android:id="@+id/u2a3idbtGenerarPropina"
         android:layout_width="214dp"
         android:layout_height="64dp"
         android:backgroundTint="@color/black"
@@ -237,7 +237,7 @@
         app:layout_constraintVertical_bias="0.755" />
 
     <TextView
-        android:id="@+id/u2a2idtvCuentaPropina"
+        android:id="@+id/u2a3idtvCuentaPropina"
         android:layout_width="222dp"
         android:layout_height="50dp"
         android:background="#4CAF50"
@@ -252,7 +252,7 @@
         app:layout_constraintVertical_bias="0.917" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/u2a3tvVisual"
         android:layout_width="149dp"
         android:layout_height="25dp"
         android:text="Cuenta Final"
@@ -262,11 +262,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/u2a2idimgTips"
+        app:layout_constraintTop_toTopOf="@+id/u2a3idimgTips"
         app:layout_constraintVertical_bias="0.834" />
 
     <TextView
-        android:id="@+id/u2a2idtvError"
+        android:id="@+id/u2a3idtvError"
         android:layout_width="365dp"
         android:layout_height="36dp"
         android:textColor="#FF0000"
@@ -274,7 +274,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/u2a2idimgTips"
+        app:layout_constraintTop_toTopOf="@+id/u2a3idimgTips"
         app:layout_constraintVertical_bias="0.977" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

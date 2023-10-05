@@ -5,7 +5,6 @@ import static java.lang.Integer.parseInt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,7 @@ import android.widget.TextView;
 
 import com.example.pmdm2324.R;
 
-public class Propinatron3000 extends AppCompatActivity {
+public class u2a3Propinatron3000 extends AppCompatActivity {
 
     Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt0, btBorrarUno, btBorrarTodo, btGenerarPropina;
     TextView tvCuenta, tvCuentaPropina, tvError;
@@ -27,25 +26,25 @@ public class Propinatron3000 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_propinatron3000);
 
-        bt1 = findViewById(R.id.u2a2idbtN1);
-        bt2 = findViewById(R.id.u2a2idbtN2);
-        bt3 = findViewById(R.id.u2a2idbtN3);
-        bt4 = findViewById(R.id.u2a2idbtN4);
-        bt5 = findViewById(R.id.u2a2idbtN5);
-        bt6 = findViewById(R.id.u2a2idbtN6);
-        bt7 = findViewById(R.id.u2a2idbtN7);
-        bt8 = findViewById(R.id.u2a2idbtN8);
-        bt9 = findViewById(R.id.u2a2idbtN9);
-        bt0 = findViewById(R.id.u2a2idbtN0);
-        btBorrarUno = findViewById(R.id.u2a2idbtBorrarUno);
-        btBorrarTodo = findViewById(R.id.u2a2idbtBorrarTodo);
-        btGenerarPropina = findViewById(R.id.u2a2idbtGenerarPropina);
-        tvCuenta = findViewById(R.id.u2a2idtvCuenta);
-        tvCuentaPropina = findViewById(R.id.u2a2idtvCuentaPropina);
-        tvError = findViewById(R.id.u2a2idtvError);
-        rbMala = findViewById(R.id.u2a2idrbMala);
-        rbBuena = findViewById(R.id.u2a2idrbBuena);
-        rbExcelente = findViewById(R.id.u2a2idrbExcelente);
+        bt1 = findViewById(R.id.u2a3idbtN1);
+        bt2 = findViewById(R.id.u2a3idbtN2);
+        bt3 = findViewById(R.id.u2a3idbtN3);
+        bt4 = findViewById(R.id.u2a3idbtN4);
+        bt5 = findViewById(R.id.u2a3idbtN5);
+        bt6 = findViewById(R.id.u2a3idbtN6);
+        bt7 = findViewById(R.id.u2a3idbtN7);
+        bt8 = findViewById(R.id.u2a3idbtN8);
+        bt9 = findViewById(R.id.u2a3idbtN9);
+        bt0 = findViewById(R.id.u2a3idbtN0);
+        btBorrarUno = findViewById(R.id.u2a3idbtBorrarUno);
+        btBorrarTodo = findViewById(R.id.u2a3idbtBorrarTodo);
+        btGenerarPropina = findViewById(R.id.u2a3idbtGenerarPropina);
+        tvCuenta = findViewById(R.id.u2a3idtvCuenta);
+        tvCuentaPropina = findViewById(R.id.u2a3idtvCuentaPropina);
+        tvError = findViewById(R.id.u2a3idtvError);
+        rbMala = findViewById(R.id.u2a3idrbMala);
+        rbBuena = findViewById(R.id.u2a3idrbBuena);
+        rbExcelente = findViewById(R.id.u2a3idrbExcelente);
 
 
 
