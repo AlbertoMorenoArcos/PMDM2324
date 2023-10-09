@@ -55,6 +55,9 @@ public class u2a3Propinatron3000 extends AppCompatActivity {
                 if(btPulsado == btBorrarTodo){
                     tvCuenta.setText("");
                     tvCuentaPropina.setText("");
+                    rbMala.setChecked(false);
+                    rbBuena.setChecked(false);
+                    rbExcelente.setChecked(false);
                 }else if(btPulsado == btBorrarUno){
                     String cuenta = tvCuenta.getText().toString();
                     String cFinal = cuenta.substring(0, (cuenta.length() - 1));

@@ -199,10 +199,10 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639">
+        app:layout_constraintVertical_bias="0.682">
 
         <RadioButton
             android:id="@+id/u2a3idrbMala"
@@ -218,8 +218,8 @@
 
         <RadioButton
             android:id="@+id/u2a3idrbExcelente"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
             android:text="Excelente" />
     </RadioGroup>
 
@@ -231,10 +231,10 @@
         android:text="Añadir Propina"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintVertical_bias="0.77" />
 
     <TextView
         android:id="@+id/u2a3idtvCuentaPropina"
@@ -276,5 +276,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/u2a3idimgTips"
         app:layout_constraintVertical_bias="0.977" />
+
+    <TextView
+        android:id="@+id/u2a3tvtxPropina"
+        android:layout_width="148dp"
+        android:layout_height="26dp"
+        android:text="Propina"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u2a3idimgTips"
+        app:layout_constraintVertical_bias="0.627" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
