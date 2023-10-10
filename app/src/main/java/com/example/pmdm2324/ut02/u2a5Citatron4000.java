@@ -94,15 +94,12 @@ public class u2a5Citatron4000 extends AppCompatActivity {
             int minute = c.get(Calendar.MINUTE);
 
             // on below line we are initializing our Time Picker Dialog
-            TimePickerDialog timePickerDialog = new TimePickerDialog(u2a5Citatron4000.this,
-                    new TimePickerDialog.OnTimeSetListener() {
-                        @Override
-                        public void onTimeSet(TimePicker view, int hourOfDay,
-                                              int minute) {
-                            // on below line we are setting selected time
-                            // in our text view.
-                            tvHora.setText(hourOfDay + ":" + minute);
-                        }
+            TimePickerDialog timePickerDialog = new TimePickerDialog(
+                    u2a5Citatron4000.this,
+                    (view, hourOfDay, minute1) -> {
+                        // on below line we are setting selected time
+                        // in our text view.
+                        tvHora.setText(hourOfDay + ":" + minute1);
                     }, hour, minute, true);
             // at last we are calling show to
             // display our time picker dialog.
