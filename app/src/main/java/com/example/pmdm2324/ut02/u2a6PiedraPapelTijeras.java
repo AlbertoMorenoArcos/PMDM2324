@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -82,14 +83,16 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
                 cFinalJugador = contadorJugador + contadorAcumulado;
                 String cJugador = String.valueOf(cFinalJugador);
                 u2a6tvidmarcadorJugador.setText(cJugador);
+                contadorAcumulado = 0;
             }else {
                 u2a6tvidresEleccion.setText("Has perdido");
                 contadorMaquina++;
                 cFinalMaquina = contadorMaquina + contadorAcumulado;
                 String nMaquina = String.valueOf(cFinalMaquina);
                 u2a6tvidmarcadorMaquina.setText(nMaquina);
+                contadorAcumulado = 0;
             }
-            if(contadorMaquina >= 7){
+            if(cFinalMaquina >= 7){
                 u2a6idtvJugador.setVisibility(View.GONE);
                 u2a6idtvMaquina.setVisibility(View.GONE);
                 u2a6tvidmarcadorJugador.setVisibility(View.GONE);
@@ -101,7 +104,9 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
                 u2a6idimbtPapel.setVisibility(View.GONE);
                 u2a6idtvPerdedor.setVisibility(View.VISIBLE);
                 u2a6idimgLose.setVisibility(View.VISIBLE);
-            }else if(contadorJugador >= 7){
+                Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                v.vibrate(3000);
+            }else if(cFinalJugador >= 7){
                 u2a6idtvJugador.setVisibility(View.GONE);
                 u2a6idtvMaquina.setVisibility(View.GONE);
                 u2a6tvidmarcadorJugador.setVisibility(View.GONE);
@@ -113,6 +118,8 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
                 u2a6idimbtPapel.setVisibility(View.GONE);
                 u2a6idtvGanador.setVisibility(View.VISIBLE);
                 u2a6idimgWin.setVisibility(View.VISIBLE);
+                Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                v.vibrate(3000);
             }
         };
 
