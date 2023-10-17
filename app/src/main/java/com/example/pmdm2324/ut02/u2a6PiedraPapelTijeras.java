@@ -54,10 +54,7 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
         u2a6idimgWin = findViewById(R.id.u2a6idimgWin);
         u2a6idimgLose = findViewById(R.id.u2a6idimgLose);
 
-        u2a6idtvGanador.setVisibility(View.GONE);
-        u2a6idtvPerdedor.setVisibility(View.GONE);
-        u2a6idimgWin.setVisibility(View.GONE);
-        u2a6idimgLose.setVisibility(View.GONE);
+        inicio();
 
         manejador = (View botonPulsado)-> {
             ImageButton btPulsado = (ImageButton) botonPulsado;
@@ -74,6 +71,7 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
             }
 
             String cJugador;
+
             if (eMaquina.equals(eJugador)) {
                 u2a6tvidresEleccion.setText("Empate");
                 contadorAcumulado = 1;
@@ -102,51 +100,31 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
                 u2a6tvidresEleccion.setText("Has perdido");
                 ++contadorMaquina;
                 contadorMaquina += contadorAcumulado;
-                String nMaquina = String.valueOf(contadorMaquina);
-                u2a6tvidmarcadorMaquina.setText(nMaquina);
+                String cMaquina = String.valueOf(contadorMaquina);
+                u2a6tvidmarcadorMaquina.setText(cMaquina);
                 contadorAcumulado = 0;
             }
             if (contadorMaquina >= 7) {
-                u2a6idtvJugador.setVisibility(View.GONE);
-                u2a6idtvMaquina.setVisibility(View.GONE);
-                u2a6tvidmarcadorJugador.setVisibility(View.GONE);
-                u2a6tvidmarcadorMaquina.setVisibility(View.GONE);
-                u2a6tvidmaqEleccion.setVisibility(View.GONE);
-                u2a6tvidresEleccion.setVisibility(View.GONE);
-                u2a6idimbtPiedra.setVisibility(View.GONE);
-                u2a6idimbtTijeras.setVisibility(View.GONE);
-                u2a6idimbtPapel.setVisibility(View.GONE);
+                ocultar();
                 u2a6idtvPerdedor.setVisibility(View.VISIBLE);
                 u2a6idimgLose.setVisibility(View.VISIBLE);
                 Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
                 v.vibrate(3000);
             } else if (contadorJugador >= 7) {
-                u2a6idtvJugador.setVisibility(View.GONE);
-                u2a6idtvMaquina.setVisibility(View.GONE);
-                u2a6tvidmarcadorJugador.setVisibility(View.GONE);
-                u2a6tvidmarcadorMaquina.setVisibility(View.GONE);
-                u2a6tvidmaqEleccion.setVisibility(View.GONE);
-                u2a6tvidresEleccion.setVisibility(View.GONE);
-                u2a6idimbtPiedra.setVisibility(View.GONE);
-                u2a6idimbtTijeras.setVisibility(View.GONE);
-                u2a6idimbtPapel.setVisibility(View.GONE);
+                ocultar();
                 u2a6idtvGanador.setVisibility(View.VISIBLE);
                 u2a6idimgWin.setVisibility(View.VISIBLE);
                 Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
                 v.vibrate(3000);
             }
         };
-
-
-
-
-        u2a6idbtReiniciar.setOnClickListener((View v) -> {
-            onBackPressed();
-        });
         u2a6idimbtPiedra.setOnClickListener(manejador);
         u2a6idimbtPapel.setOnClickListener(manejador);
         u2a6idimbtTijeras.setOnClickListener(manejador);
 
+        u2a6idbtReiniciar.setOnClickListener((View v) -> {
+            onBackPressed();
+        });
 
 
 
@@ -169,26 +147,8 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
         // Set the positive button with yes name Lambda OnClickListener method is use of DialogInterface interface.
         builder.setPositiveButton("Si", (DialogInterface.OnClickListener) (dialog, which) -> {
             // When the user click yes button then app will close
-            u2a6tvidmarcadorJugador.setText("0");
-            u2a6tvidmarcadorMaquina.setText("0");
-            u2a6tvidresEleccion.setText("");
-            u2a6tvidmaqEleccion.setText("");
-            contadorJugador = 0;
-            contadorMaquina = 0;
-            contadorAcumulado = 0;
-            u2a6idtvJugador.setVisibility(View.VISIBLE);
-            u2a6idtvMaquina.setVisibility(View.VISIBLE);
-            u2a6tvidmarcadorJugador.setVisibility(View.VISIBLE);
-            u2a6tvidmarcadorMaquina.setVisibility(View.VISIBLE);
-            u2a6tvidmaqEleccion.setVisibility(View.VISIBLE);
-            u2a6tvidresEleccion.setVisibility(View.VISIBLE);
-            u2a6idimbtPiedra.setVisibility(View.VISIBLE);
-            u2a6idimbtTijeras.setVisibility(View.VISIBLE);
-            u2a6idimbtPapel.setVisibility(View.VISIBLE);
-            u2a6idtvGanador.setVisibility(View.GONE);
-            u2a6idimgWin.setVisibility(View.GONE);
-            u2a6idtvPerdedor.setVisibility(View.GONE);
-            u2a6idimgLose.setVisibility(View.GONE);
+
+            inicio();
 
         });
 
@@ -208,4 +168,41 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
         int i = new Random().nextInt(eleccion.length);
         return eleccion[i];
     }
+    private void ocultar(){
+        u2a6idtvJugador.setVisibility(View.GONE);
+        u2a6idtvMaquina.setVisibility(View.GONE);
+        u2a6tvidmarcadorJugador.setVisibility(View.GONE);
+        u2a6tvidmarcadorMaquina.setVisibility(View.GONE);
+        u2a6tvidmaqEleccion.setVisibility(View.GONE);
+        u2a6tvidresEleccion.setVisibility(View.GONE);
+        u2a6idimbtPiedra.setVisibility(View.GONE);
+        u2a6idimbtTijeras.setVisibility(View.GONE);
+        u2a6idimbtPapel.setVisibility(View.GONE);
+    }
+    private void visualizar(){
+        u2a6idtvJugador.setVisibility(View.VISIBLE);
+        u2a6idtvMaquina.setVisibility(View.VISIBLE);
+        u2a6tvidmarcadorJugador.setVisibility(View.VISIBLE);
+        u2a6tvidmarcadorMaquina.setVisibility(View.VISIBLE);
+        u2a6tvidmaqEleccion.setVisibility(View.VISIBLE);
+        u2a6tvidresEleccion.setVisibility(View.VISIBLE);
+        u2a6idimbtPiedra.setVisibility(View.VISIBLE);
+        u2a6idimbtTijeras.setVisibility(View.VISIBLE);
+        u2a6idimbtPapel.setVisibility(View.VISIBLE);
+    }
+    private void inicio(){
+        u2a6tvidmarcadorJugador.setText("0");
+        u2a6tvidmarcadorMaquina.setText("0");
+        u2a6tvidresEleccion.setText("");
+        u2a6tvidmaqEleccion.setText("");
+        contadorJugador = 0;
+        contadorMaquina = 0;
+        contadorAcumulado = 0;
+        u2a6idtvGanador.setVisibility(View.GONE);
+        u2a6idimgWin.setVisibility(View.GONE);
+        u2a6idtvPerdedor.setVisibility(View.GONE);
+        u2a6idimgLose.setVisibility(View.GONE);
+        visualizar();
+    }
+
 }
