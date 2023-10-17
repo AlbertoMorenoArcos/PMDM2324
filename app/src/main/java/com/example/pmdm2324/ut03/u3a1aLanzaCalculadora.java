@@ -1,6 +1,6 @@
 package com.example.pmdm2324.ut03;
 
-import static java.lang.Double.isNaN;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -43,18 +43,36 @@ public class u3a1aLanzaCalculadora extends AppCompatActivity {
 
 
         btCalcular.setOnClickListener(view -> {
-
-
-            Intent i = new Intent(this, u3a1bResultado.class);
-
             String numero1 = etNumero1.getText().toString();
             String numero2 = etNumero2.getText().toString();
-            i.putExtra(INFO_NUMERO1, numero1);
-            i.putExtra(INFO_NUMERO2, numero2);
+            boolean hayErrores = false;
 
-            if (!numero1.isEmpty() && !numero2.isEmpty()) {
+            if (numero1.isEmpty()) {
+                eNumero1.setText("Número 1 vacío.");
+                hayErrores = true;
+            } else {
                 eNumero1.setText("");
+            }
+
+            if (numero2.isEmpty()) {
+                eNumero2.setText("Número 2 vacío.");
+                hayErrores = true;
+            } else {
                 eNumero2.setText("");
+            }
+
+            if (!rbSumar.isChecked() && !rbRestar.isChecked() && !rbMultiplicar.isChecked() && !rbDividir.isChecked()) {
+                eRadio.setText("Selecciona una operación.");
+                hayErrores = true;
+            } else {
+                eRadio.setText("");
+            }
+
+            if (!hayErrores) {
+                Intent i = new Intent(this, u3a1bResultado.class);
+                i.putExtra(INFO_NUMERO1, numero1);
+                i.putExtra(INFO_NUMERO2, numero2);
+
                 if (rbSumar.isChecked()) {
                     i.putExtra(INFO_OPERACION, rbSumar.getText().toString());
                 } else if (rbRestar.isChecked()) {
@@ -64,19 +82,9 @@ public class u3a1aLanzaCalculadora extends AppCompatActivity {
                 } else if (rbDividir.isChecked()) {
                     i.putExtra(INFO_OPERACION, rbDividir.getText().toString());
                 }
-            } else {
-                if (numero1.isEmpty()) {
-                    eNumero1.setText("Numero 1 vacio.");
-                }
-                if (numero2.isEmpty()) {
-                    eNumero2.setText("Numero 2 vacio.");
-                }
 
-
+                startActivity(i);
             }
-
-
-            startActivity(i);
         });
 
     }

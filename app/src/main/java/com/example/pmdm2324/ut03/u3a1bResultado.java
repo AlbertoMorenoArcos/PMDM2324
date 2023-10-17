@@ -33,21 +33,21 @@ public class u3a1bResultado extends AppCompatActivity {
         if (operacion.equals("Sumar")){
             resultado = n1+n2;
             String res= Integer.toString(resultado);
-            tvSalida.setText(res);
+            tvSalida.setText(n1 + "+" + n2 + "=" + res);
         } else if (operacion.equals("Restar")) {
             resultado = n1-n2;
             String res= Integer.toString(resultado);
-            tvSalida.setText(res);
+            tvSalida.setText(n1 + "-" + n2 + "=" + res);
         }
         else if (operacion.equals("Multiplicar")) {
             resultado = n1*n2;
             String res= Integer.toString(resultado);
-            tvSalida.setText(res);
+            tvSalida.setText(n1 + "*" + n2 + "=" + res);
         }
         else if (operacion.equals("Dividir")) {
             resultado = n1/n2;
             String res= Integer.toString(resultado);
-            tvSalida.setText(res);
+            tvSalida.setText(n1 + "/" + n2 + "=" + res);
         }
 
     }
