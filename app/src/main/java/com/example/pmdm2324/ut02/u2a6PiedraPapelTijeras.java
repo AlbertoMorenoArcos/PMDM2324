@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
@@ -140,9 +139,7 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
 
 
 
-        u2a6idbtReiniciar.setOnClickListener((View v) -> {
-            onBackPressed();
-        });
+        u2a6idbtReiniciar.setOnClickListener((View v) -> onBackPressed());
         u2a6idimbtPiedra.setOnClickListener(manejador);
         u2a6idimbtPapel.setOnClickListener(manejador);
         u2a6idimbtTijeras.setOnClickListener(manejador);
@@ -167,7 +164,7 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
         builder.setCancelable(false);
 
         // Set the positive button with yes name Lambda OnClickListener method is use of DialogInterface interface.
-        builder.setPositiveButton("Si", (DialogInterface.OnClickListener) (dialog, which) -> {
+        builder.setPositiveButton("Si",  (dialog, which) -> {
             // When the user click yes button then app will close
             u2a6tvidmarcadorJugador.setText("0");
             u2a6tvidmarcadorMaquina.setText("0");
@@ -193,7 +190,7 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
         });
 
         // Set the Negative button with No name Lambda OnClickListener method is use of DialogInterface interface.
-        builder.setNegativeButton("No", (DialogInterface.OnClickListener) (dialog, which) -> {
+        builder.setNegativeButton("No", (dialog, which) -> {
             // If user click no then dialog box is canceled.
             dialog.cancel();
         });
