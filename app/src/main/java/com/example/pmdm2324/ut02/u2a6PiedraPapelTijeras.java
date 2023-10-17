@@ -106,29 +106,13 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
                 contadorAcumulado = 0;
             }
             if (contadorMaquina >= 7) {
-                u2a6idtvJugador.setVisibility(View.GONE);
-                u2a6idtvMaquina.setVisibility(View.GONE);
-                u2a6tvidmarcadorJugador.setVisibility(View.GONE);
-                u2a6tvidmarcadorMaquina.setVisibility(View.GONE);
-                u2a6tvidmaqEleccion.setVisibility(View.GONE);
-                u2a6tvidresEleccion.setVisibility(View.GONE);
-                u2a6idimbtPiedra.setVisibility(View.GONE);
-                u2a6idimbtTijeras.setVisibility(View.GONE);
-                u2a6idimbtPapel.setVisibility(View.GONE);
+                ocultarInterfaz();
                 u2a6idtvPerdedor.setVisibility(View.VISIBLE);
                 u2a6idimgLose.setVisibility(View.VISIBLE);
                 Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
                 v.vibrate(3000);
             } else if (contadorJugador >= 7) {
-                u2a6idtvJugador.setVisibility(View.GONE);
-                u2a6idtvMaquina.setVisibility(View.GONE);
-                u2a6tvidmarcadorJugador.setVisibility(View.GONE);
-                u2a6tvidmarcadorMaquina.setVisibility(View.GONE);
-                u2a6tvidmaqEleccion.setVisibility(View.GONE);
-                u2a6tvidresEleccion.setVisibility(View.GONE);
-                u2a6idimbtPiedra.setVisibility(View.GONE);
-                u2a6idimbtTijeras.setVisibility(View.GONE);
-                u2a6idimbtPapel.setVisibility(View.GONE);
+                ocultarInterfaz();
                 u2a6idtvGanador.setVisibility(View.VISIBLE);
                 u2a6idimgWin.setVisibility(View.VISIBLE);
                 Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
@@ -163,27 +147,7 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
         // Set the positive button with yes name Lambda OnClickListener method is use of DialogInterface interface.
         builder.setPositiveButton("Si",  (dialog, which) -> {
             // When the user click yes button then app will close
-            u2a6tvidmarcadorJugador.setText("0");
-            u2a6tvidmarcadorMaquina.setText("0");
-            u2a6tvidresEleccion.setText("");
-            u2a6tvidmaqEleccion.setText("");
-            contadorJugador = 0;
-            contadorMaquina = 0;
-            contadorAcumulado = 0;
-            u2a6idtvJugador.setVisibility(View.VISIBLE);
-            u2a6idtvMaquina.setVisibility(View.VISIBLE);
-            u2a6tvidmarcadorJugador.setVisibility(View.VISIBLE);
-            u2a6tvidmarcadorMaquina.setVisibility(View.VISIBLE);
-            u2a6tvidmaqEleccion.setVisibility(View.VISIBLE);
-            u2a6tvidresEleccion.setVisibility(View.VISIBLE);
-            u2a6idimbtPiedra.setVisibility(View.VISIBLE);
-            u2a6idimbtTijeras.setVisibility(View.VISIBLE);
-            u2a6idimbtPapel.setVisibility(View.VISIBLE);
-            u2a6idtvGanador.setVisibility(View.GONE);
-            u2a6idimgWin.setVisibility(View.GONE);
-            u2a6idtvPerdedor.setVisibility(View.GONE);
-            u2a6idimgLose.setVisibility(View.GONE);
-
+            reiniciarInterfaz();
         });
 
         // Set the Negative button with No name Lambda OnClickListener method is use of DialogInterface interface.
@@ -196,6 +160,39 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         // Show the Alert Dialog box
         alertDialog.show();
+    }
+    private void ocultarInterfaz(){
+        u2a6idtvJugador.setVisibility(View.GONE);
+        u2a6idtvMaquina.setVisibility(View.GONE);
+        u2a6tvidmarcadorJugador.setVisibility(View.GONE);
+        u2a6tvidmarcadorMaquina.setVisibility(View.GONE);
+        u2a6tvidmaqEleccion.setVisibility(View.GONE);
+        u2a6tvidresEleccion.setVisibility(View.GONE);
+        u2a6idimbtPiedra.setVisibility(View.GONE);
+        u2a6idimbtTijeras.setVisibility(View.GONE);
+        u2a6idimbtPapel.setVisibility(View.GONE);
+    }
+    private void reiniciarInterfaz(){
+        u2a6tvidmarcadorJugador.setText("0");
+        u2a6tvidmarcadorMaquina.setText("0");
+        u2a6tvidresEleccion.setText("");
+        u2a6tvidmaqEleccion.setText("");
+        contadorJugador = 0;
+        contadorMaquina = 0;
+        contadorAcumulado = 0;
+        u2a6idtvGanador.setVisibility(View.GONE);
+        u2a6idimgWin.setVisibility(View.GONE);
+        u2a6idtvPerdedor.setVisibility(View.GONE);
+        u2a6idimgLose.setVisibility(View.GONE);
+        u2a6idtvJugador.setVisibility(View.VISIBLE);
+        u2a6idtvMaquina.setVisibility(View.VISIBLE);
+        u2a6tvidmarcadorJugador.setVisibility(View.VISIBLE);
+        u2a6tvidmarcadorMaquina.setVisibility(View.VISIBLE);
+        u2a6tvidmaqEleccion.setVisibility(View.VISIBLE);
+        u2a6tvidresEleccion.setVisibility(View.VISIBLE);
+        u2a6idimbtPiedra.setVisibility(View.VISIBLE);
+        u2a6idimbtTijeras.setVisibility(View.VISIBLE);
+        u2a6idimbtPapel.setVisibility(View.VISIBLE);
     }
     private String EleccionMaquina() {
         String[] eleccion = {"Piedra", "Papel", "Tijeras"};
