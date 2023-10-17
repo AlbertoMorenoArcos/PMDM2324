@@ -144,9 +144,6 @@ public class u2a6PiedraPapelTijeras extends AppCompatActivity {
         u2a6idimbtPapel.setOnClickListener(manejador);
         u2a6idimbtTijeras.setOnClickListener(manejador);
 
-
-
-
     }
     // Declare the onBackPressed method when the back button is pressed this method will call
     @Override
