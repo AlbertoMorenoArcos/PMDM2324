@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a1aLanzaCalculadora">
+
+    <Button
+        android:id="@+id/u3a1idbtLanza"
+        android:layout_width="269dp"
+        android:layout_height="82dp"
+        android:text="Calcular"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.657" />
+
+    <EditText
+        android:id="@+id/u3a1idetNumero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118" />
+
+    <EditText
+        android:id="@+id/u3a1idetNumero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362" />
+
+    <RadioGroup
+        android:layout_width="342dp"
+        android:layout_height="53dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235">
+
+        <RadioButton
+            android:id="@+id/u3a1idrbSumar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sumar" />
+
+        <RadioButton
+            android:id="@+id/u3a1idrbRestar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restar" />
+
+        <RadioButton
+            android:id="@+id/u3a1idrbMultiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multiplicar" />
+
+        <RadioButton
+            android:id="@+id/u3a1idrbDividir"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:text="Dividir" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/u3a1idtvErrorN1"
+        android:layout_width="226dp"
+        android:layout_height="22dp"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <TextView
+        android:id="@+id/u3a1idtvErrorRadio"
+        android:layout_width="226dp"
+        android:layout_height="22dp"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/u3a1idtvErrorN2"
+        android:layout_width="226dp"
+        android:layout_height="22dp"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413" />
+</androidx.constraintlayout.widget.ConstraintLayout>
