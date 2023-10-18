@@ -24,7 +24,7 @@ public class u3a1bResultado extends AppCompatActivity {
         String numero1 = info.getString(u3a1aLanzaCalculadora.INFO_NUMERO1);
         String numero2 = info.getString(u3a1aLanzaCalculadora.INFO_NUMERO2);
         String operacion = info.getString(u3a1aLanzaCalculadora.INFO_OPERACION);
-        int resultado;
+        float resultado;
 
         int n1 = Integer.parseInt(numero1);
         int n2 = Integer.parseInt(numero2);
@@ -32,21 +32,21 @@ public class u3a1bResultado extends AppCompatActivity {
 
         if (operacion.equals("Sumar")){
             resultado = n1+n2;
-            String res= Integer.toString(resultado);
+            String res= Float.toString(resultado);
             tvSalida.setText(n1 + "+" + n2 + "=" + res);
         } else if (operacion.equals("Restar")) {
             resultado = n1-n2;
-            String res= Integer.toString(resultado);
+            String res= Float.toString(resultado);
             tvSalida.setText(n1 + "-" + n2 + "=" + res);
         }
         else if (operacion.equals("Multiplicar")) {
             resultado = n1*n2;
-            String res= Integer.toString(resultado);
+            String res= Float.toString(resultado);
             tvSalida.setText(n1 + "*" + n2 + "=" + res);
         }
         else if (operacion.equals("Dividir")) {
             resultado = n1/n2;
-            String res= Integer.toString(resultado);
+            String res= Float.toString(resultado);
             tvSalida.setText(n1 + "/" + n2 + "=" + res);
         }
 

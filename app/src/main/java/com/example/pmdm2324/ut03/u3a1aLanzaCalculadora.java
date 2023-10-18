@@ -57,8 +57,12 @@ public class u3a1aLanzaCalculadora extends AppCompatActivity {
             if (numero2.isEmpty()) {
                 eNumero2.setText("Número 2 vacío.");
                 hayErrores = true;
-            } else {
+            }else if(rbDividir.isChecked() && !numero2.isEmpty() && numero2.equals("0")){
+                eNumero2.setText("No se puede dividir por 0.");
+                hayErrores = true;
+            }else if(rbDividir.isChecked() && !numero2.isEmpty() && !numero2.equals("0")){
                 eNumero2.setText("");
+
             }
 
             if (!rbSumar.isChecked() && !rbRestar.isChecked() && !rbMultiplicar.isChecked() && !rbDividir.isChecked()) {
@@ -81,6 +85,7 @@ public class u3a1aLanzaCalculadora extends AppCompatActivity {
                     i.putExtra(INFO_OPERACION, rbMultiplicar.getText().toString());
                 } else if (rbDividir.isChecked()) {
                     i.putExtra(INFO_OPERACION, rbDividir.getText().toString());
+
                 }
 
                 startActivity(i);
