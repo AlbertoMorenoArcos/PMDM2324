@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a2aHelatron">
+
+    <TextView
+        android:id="@+id/u3a2idtvChocolate"
+        android:layout_width="126dp"
+        android:layout_height="36dp"
+        android:text="Chocolate"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <TextView
+        android:id="@+id/u3a2idtvFresa"
+        android:layout_width="126dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:text="Fresa"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2idtvChocolate"
+        app:layout_constraintStart_toStartOf="@+id/u3a2idtvChocolate"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2idtvChocolate" />
+
+    <TextView
+        android:id="@+id/u3a2idtvVainilla"
+        android:layout_width="126dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:text="Vainilla"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2idtvFresa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a2idtvFresa"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2idtvFresa" />
+
+    <EditText
+        android:id="@+id/u3a2idetBolasChoco"
+        android:layout_width="56dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="36dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/u3a2idtvChocolate"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <EditText
+        android:id="@+id/u3a2idetBolasFresa"
+        android:layout_width="56dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="36dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/u3a2idtvFresa"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <EditText
+        android:id="@+id/u3a2idetBolasVaini"
+        android:layout_width="56dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="36dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/u3a2idtvVainilla"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <Spinner
+        android:id="@+id/u3a2idspRecipiente"
+        android:layout_width="217dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2idtvVainilla" />
+
+    <Button
+        android:id="@+id/u3a2idbtElegir"
+        android:layout_width="228dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="148dp"
+        android:text="Elegir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2idspRecipiente" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

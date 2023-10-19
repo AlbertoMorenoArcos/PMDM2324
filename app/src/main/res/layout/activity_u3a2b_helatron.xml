@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a2bHelatron">
+
+    <TextView
+        android:id="@+id/u3a2bidtvFresa"
+        android:layout_width="387dp"
+        android:layout_height="123dp"
+        android:text="Bolas de fresa"
+        android:textColor="#FF2929"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <TextView
+        android:id="@+id/u3a2bidtvVainilla"
+        android:layout_width="387dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="32dp"
+        android:text="Bolas de vainilla"
+        android:textColor="#F3E5AB "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2bidtvChocolate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a2bidtvChocolate"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2bidtvChocolate" />
+
+    <TextView
+        android:id="@+id/u3a2bidtvChocolate"
+        android:layout_width="387dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="28dp"
+        android:text="Bolas de chocolate"
+        android:textColor="#804000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2bidtvFresa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a2bidtvFresa"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2bidtvFresa" />
+
+    <TextView
+        android:id="@+id/u3a2bidtvRecipiente"
+        android:layout_width="181dp"
+        android:layout_height="95dp"
+        android:text="Recipiente"
+        android:textAlignment="center"
+        android:textColor="#020000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.872" />
+</androidx.constraintlayout.widget.ConstraintLayout>
