@@ -62,7 +62,8 @@ public class u3a1aLanzaCalculadora extends AppCompatActivity {
                 hayErrores = true;
             }else if(rbDividir.isChecked() && !numero2.isEmpty() && !numero2.equals("0")){
                 eNumero2.setText("");
-
+            }else if(rbSumar.isChecked() || rbRestar.isChecked() || rbMultiplicar.isChecked() && !numero2.isEmpty() ){
+                eNumero2.setText("");
             }
 
             if (!rbSumar.isChecked() && !rbRestar.isChecked() && !rbMultiplicar.isChecked() && !rbDividir.isChecked()) {
