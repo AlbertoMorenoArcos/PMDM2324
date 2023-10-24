@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a4aCalentamiento">
+
+    <TextView
+        android:id="@+id/u3a4aidtvNombre"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="32dp"
+        android:text="Anonimo"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/u3a4abtObtenerNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:text="Obtener Nombre"
+        app:layout_constraintEnd_toEndOf="@+id/u3a4aidtvNombre"
+        app:layout_constraintStart_toStartOf="@+id/u3a4aidtvNombre"
+        app:layout_constraintTop_toBottomOf="@+id/u3a4aidtvNombre" />
+
+    <TextView
+        android:id="@+id/u3a4atvMensaje"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="81dp"
+        android:text="- -"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a4abtObtenerNombre"
+        app:layout_constraintStart_toStartOf="@+id/u3a4abtObtenerNombre"
+        app:layout_constraintTop_toBottomOf="@+id/u3a4abtObtenerNombre" />
+</androidx.constraintlayout.widget.ConstraintLayout>

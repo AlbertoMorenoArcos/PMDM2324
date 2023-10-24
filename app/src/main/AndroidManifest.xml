@@ -15,10 +15,10 @@
         android:theme="@style/Theme.PMDM2324"
         tools:targetApi="31">
         <activity
-            android:name=".ut03.u3a2bHelatron"
+            android:name=".ut03.u3a4bCalentamiento"
             android:exported="false" />
         <activity
-            android:name=".ut03.u3a2aHelatron"
+            android:name=".ut03.u3a4aCalentamiento"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,15 +27,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ut03.u3a2bHelatron"
+            android:exported="false" />
+        <activity
+            android:name=".ut03.u3a2aHelatron"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".ut03.u3a1bResultado"
             android:exported="false" />
         <activity
             android:name=".ut03.u3a1aLanzaCalculadora"
-            android:exported="true">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".ut02.u2a6PiedraPapelTijeras"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".ut02.u2a5Citatron4000"
             android:exported="true" />
@@ -47,9 +53,6 @@
             android:exported="true" />
         <activity
             android:name=".ut01.actividadSaludo"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true" />
     </application>
 
