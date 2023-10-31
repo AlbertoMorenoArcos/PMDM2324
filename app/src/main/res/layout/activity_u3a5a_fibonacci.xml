@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a5aFibonacci">
+
+    <TextView
+        android:id="@+id/u3a5aidtvn1"
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="76dp"
+        android:text="Numero 1"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/u3a5aidtvNumero1"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="76dp"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/u3a5aidtvn1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/u3a5aidtvNumero2"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/u3a5aidtvn2"
+        app:layout_constraintTop_toBottomOf="@+id/u3a5aidtvNumero1" />
+
+    <TextView
+        android:id="@+id/u3a5aidtvn2"
+        android:layout_width="97dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="28dp"
+        android:text="Numero 2"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/u3a5aidtvn1"
+        app:layout_constraintStart_toStartOf="@+id/u3a5aidtvn1"
+        app:layout_constraintTop_toBottomOf="@+id/u3a5aidtvn1" />
+
+    <Button
+        android:id="@+id/u3a5aidbtSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="276dp"
+        android:text="Siguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a5aidtvn2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

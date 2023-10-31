@@ -49,7 +49,7 @@ public class u3a4aCalentamiento extends AppCompatActivity {
                         tvMensaje.setText("El usuario ha cancelado cancelado");
                         tvMensaje.setTextColor(Color.RED);
                     }else if (result.getResultCode() == Activity.RESULT_FIRST_USER) {
-                        tvNombre.setText("");
+                        tvNombre.setText("Anonimo");
                         tvMensaje.setText("El usuario ha limpiado el nombre");
                         tvMensaje.setTextColor(Color.GREEN);
                     } else {
