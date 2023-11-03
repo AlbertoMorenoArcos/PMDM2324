@@ -1,5 +1,7 @@
 package com.example.pmdm2324.ut03;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +17,8 @@ import com.example.pmdm2324.R;
 
 public class u3a6aAnalisisLetras extends AppCompatActivity {
 
-    public static final String CLAVE_TEXTO = "Texto";
+    ActivityResultLauncher<Intent> lanzador;
+    public static final String FRASE = "fraseaenviar";
     TextView tvResultado;
     EditText etTexto;
 
@@ -28,23 +31,28 @@ public class u3a6aAnalisisLetras extends AppCompatActivity {
         etTexto = findViewById(R.id.u3a6aidetTexto);
         btAnalizar = findViewById(R.id.u3a6abtAnalizar);
 
-        ActivityResultLauncher<Intent> lanzador = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                result -> {
-                    Intent datosRecibidos = result.getData();
+        tvResultado = findViewById(R.id.u3a6aidtvResultado);
+        etTexto = findViewById(R.id.u3a6aidetTexto);
+        btAnalizar = findViewById(R.id.u3a6abtAnalizar);
 
-                    if (result.getResultCode() == Activity.RESULT_OK) {
-
-
-                    }
-                }
-        );
-
-        btAnalizar.setOnClickListener(view->{
-            Intent i = new Intent(this, u3a5bFibonacci.class);
-            i.putExtra(CLAVE_TEXTO, etTexto.getText().toString());
+        btAnalizar.setOnClickListener(view ->{
+            Intent i = new Intent(this, u3a6bAnalisisLetras.class);
+            i.putExtra(u3a6aAnalisisLetras.FRASE, etTexto.getText().toString());
             lanzador.launch(i);
         });
+
+        lanzador = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+                        Intent dato = result.getData();
+                        if(result.getResultCode() == Activity.RESULT_OK){
+                            tvResultado.setText(dato.getStringExtra(u3a6bAnalisisLetras.CLAVE_ANALISIS));
+                        }
+                    }
+                });
+
 
     }
 }

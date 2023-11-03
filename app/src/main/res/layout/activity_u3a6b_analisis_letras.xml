@@ -8,10 +8,11 @@
 
     <TextView
         android:id="@+id/u3a6bidtvLetras"
-        android:layout_width="337dp"
-        android:layout_height="193dp"
-        android:layout_marginTop="208dp"
+        android:layout_width="370dp"
+        android:layout_height="603dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,9 +20,10 @@
         android:id="@+id/u3a6idbtFinAnalisis"
         android:layout_width="278dp"
         android:layout_height="65dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="16dp"
         android:text="Finalizar analisis"
         app:layout_constraintEnd_toEndOf="@+id/u3a6bidtvLetras"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="@+id/u3a6bidtvLetras"
         app:layout_constraintTop_toBottomOf="@+id/u3a6bidtvLetras" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,21 @@
         android:theme="@style/Theme.PMDM2324"
         tools:targetApi="31">
         <activity
+            android:name=".ut03.u3a7cMetalSlug"
+            android:exported="false" />
+        <activity
+            android:name=".ut03.u3a7bMetalSlug"
+            android:exported="false" />
+        <activity
+            android:name=".ut03.u3a7aMetalSlug"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ut03.u3a6bAnalisisLetras"
             android:exported="false" />
         <activity
