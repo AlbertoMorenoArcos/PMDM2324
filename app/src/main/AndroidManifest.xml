@@ -34,24 +34,14 @@
             android:exported="false" />
         <activity
             android:name=".ut03.u3a6aAnalisisLetras"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
         <activity
             android:name=".ut03.u3a5bFibonacci"
             android:exported="false" />
         <activity
             android:name=".ut03.u3a5aFibonacci"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
         <activity
             android:name=".ut03.u3a4bCalentamiento"
