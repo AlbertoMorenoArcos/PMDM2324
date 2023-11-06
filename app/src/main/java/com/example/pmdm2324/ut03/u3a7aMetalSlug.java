@@ -25,6 +25,9 @@ public class u3a7aMetalSlug extends AppCompatActivity {
     Button btLimpiar;
 
     ActivityResultLauncher<Intent> lanzadorJ1,lanzadorJ2, lanzadorA1, lanzadorA2;
+    public static final String NOMBRE_PERSONAJE = "PERSONAJE";
+    String nombrePersonaje1 = "";
+    String nombrePersonaje2 = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,7 @@ public class u3a7aMetalSlug extends AppCompatActivity {
                     Intent data = result.getData();
                     if(result.getResultCode() == Activity.RESULT_OK){
                         imgbtJugador1.setImageResource(data.getExtras().getInt(u3a7bMetalSlug.ELECCIONJUGADOR));
+                         nombrePersonaje1 = data.getExtras().getString(u3a7bMetalSlug.NOMBRE_PERSONAJE);
                     }
                     if(result.getResultCode() == Activity.RESULT_FIRST_USER){
                         imgbtJugador1.setImageResource(R.drawable.icono);
@@ -54,6 +58,7 @@ public class u3a7aMetalSlug extends AppCompatActivity {
                     Intent data = result.getData();
                     if(result.getResultCode() == Activity.RESULT_OK){
                         imgbtJugador2.setImageResource(data.getExtras().getInt(u3a7bMetalSlug.ELECCIONJUGADOR));
+                         nombrePersonaje2 = data.getExtras().getString(u3a7bMetalSlug.NOMBRE_PERSONAJE);
                     }
                     if(result.getResultCode() == Activity.RESULT_FIRST_USER){
                         imgbtJugador2.setImageResource(R.drawable.icono);
@@ -76,6 +81,7 @@ public class u3a7aMetalSlug extends AppCompatActivity {
                     Intent data = result.getData();
                     if(result.getResultCode() == Activity.RESULT_OK){
                         imgbtArmaJugador2.setImageResource(data.getExtras().getInt(u3a7cMetalSlug.ELECCIONARMA));
+
                     }
                     if(result.getResultCode() == Activity.RESULT_FIRST_USER){
                         imgbtArmaJugador2.setImageResource(R.drawable.arma);
@@ -84,11 +90,13 @@ public class u3a7aMetalSlug extends AppCompatActivity {
 
         imgbtJugador1.setOnClickListener(view ->{
             Intent i = new Intent(this, u3a7bMetalSlug.class);
+            i.putExtra(NOMBRE_PERSONAJE, nombrePersonaje2);
             lanzadorJ1.launch(i);
         });
 
         imgbtJugador2.setOnClickListener(view ->{
             Intent i = new Intent(this, u3a7bMetalSlug.class);
+            i.putExtra(NOMBRE_PERSONAJE, nombrePersonaje1);
             lanzadorJ2.launch(i);
         });
 
@@ -106,6 +114,8 @@ public class u3a7aMetalSlug extends AppCompatActivity {
             imgbtJugador2.setImageResource(R.drawable.icono);
             imgbtArmaJugador1.setImageResource(R.drawable.arma);
             imgbtArmaJugador2.setImageResource(R.drawable.arma);
+            nombrePersonaje1 = "";
+            nombrePersonaje2 = "";
         });
 
 

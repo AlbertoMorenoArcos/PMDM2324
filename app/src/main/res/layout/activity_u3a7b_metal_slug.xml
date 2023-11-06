@@ -9,7 +9,7 @@
     tools:context=".ut03.u3a7bMetalSlug">
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tvPersonaje1"
         android:layout_width="107dp"
         android:layout_height="30dp"
         android:layout_marginStart="56dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tvPersonaje3"
         android:layout_width="107dp"
         android:layout_height="30dp"
         android:layout_marginTop="52dp"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/u3a7aidimgbtMarco" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/tvPersonaje4"
         android:layout_width="107dp"
         android:layout_height="30dp"
         android:layout_marginStart="92dp"
@@ -47,13 +47,13 @@
         android:textColor="#FF0000"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView14"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toTopOf="@+id/textView14"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPersonaje3"
+        app:layout_constraintStart_toEndOf="@+id/tvPersonaje3"
+        app:layout_constraintTop_toTopOf="@+id/tvPersonaje3"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tvPersonaje2"
         android:layout_width="107dp"
         android:layout_height="30dp"
         android:layout_marginStart="92dp"
@@ -62,9 +62,9 @@
         android:textColor="#FF0000"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView12"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toTopOf="@+id/textView12"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPersonaje1"
+        app:layout_constraintStart_toEndOf="@+id/tvPersonaje1"
+        app:layout_constraintTop_toTopOf="@+id/tvPersonaje1"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -88,10 +88,10 @@
         android:layout_height="156dp"
         android:layout_marginTop="12dp"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="@+id/tvPersonaje1"
         app:layout_constraintHorizontal_bias="0.469"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/tvPersonaje1"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonaje1"
         app:srcCompat="@drawable/marco" />
 
     <ImageButton
@@ -100,10 +100,10 @@
         android:layout_height="156dp"
         android:layout_marginTop="20dp"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="@+id/tvPersonaje3"
         app:layout_constraintHorizontal_bias="0.469"
-        app:layout_constraintStart_toStartOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/tvPersonaje3"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonaje3"
         app:srcCompat="@drawable/tarma" />
 
     <ImageButton
@@ -112,10 +112,10 @@
         android:layout_height="156dp"
         android:layout_marginTop="20dp"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="@+id/tvPersonaje4"
         app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/tvPersonaje4"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonaje4"
         app:srcCompat="@drawable/fio" />
 
     <ImageButton
@@ -124,9 +124,9 @@
         android:layout_height="156dp"
         android:layout_marginTop="12dp"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="@+id/textView13"
-        app:layout_constraintStart_toStartOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="@+id/tvPersonaje2"
+        app:layout_constraintStart_toStartOf="@+id/tvPersonaje2"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonaje2"
         app:srcCompat="@drawable/eri" />
 
     <Button
