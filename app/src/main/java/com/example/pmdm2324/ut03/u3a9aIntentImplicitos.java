@@ -14,7 +14,7 @@ import com.example.pmdm2324.R;
 
 public class u3a9aIntentImplicitos extends AppCompatActivity {
     public static final String URL_CANCION = "https://www.youtube.com/watch?v=eyurjSNb20w";
-    public static final String CADENA_ERROR = "No se pudo realizar la acción";
+    public static final String CADENA_ERROR = "No se pudo realizar la operación";
     public static final String CADENA_SMS = "Te veo hoy a las 6pm";
     public static final String NUMERO_PACO = "625789413";
     public static final String STRING_GEOLOCALIZACION = "geo:0,0?q=Paseo+de+la+Florida,+10,+28008+Madrid";
@@ -36,7 +36,13 @@ public class u3a9aIntentImplicitos extends AppCompatActivity {
         btnCancion.setOnClickListener(view -> {
             Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
             intent.putExtra(SearchManager.QUERY, URL_CANCION);
-            startActivity(intent);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+                tvError.setText("");
+            } else {
+                tvError.setText(CADENA_ERROR);
+            }
+
         });
 
         btnNumero.setOnClickListener(view -> {
@@ -44,22 +50,33 @@ public class u3a9aIntentImplicitos extends AppCompatActivity {
             intent.setData(Uri.parse("tel:" + "666"));
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
+                tvError.setText("");
             } else {
                 tvError.setText(CADENA_ERROR);
             }
         });
 
         btnSMS.setOnClickListener(view -> {
-            Uri uri = Uri.parse("smsto:" + NUMERO_PACO);
-            Intent i = new Intent(Intent.ACTION_SENDTO, uri);
-            i.putExtra("sms_body", CADENA_SMS);
-            startActivity(i);
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse("smsto:" + NUMERO_PACO)); //Si se cambia a mailto  manda emails
+            i.putExtra("sms_body", CADENA_SMS); //mail_body
+            if (getIntent().resolveActivity(getPackageManager()) != null) {
+                startActivity(i);
+                tvError.setText("");
+            } else {
+                tvError.setText(CADENA_ERROR);
+            }
         });
 
         btnAbrirMapa.setOnClickListener(view -> {
             Uri uri = Uri.parse(STRING_GEOLOCALIZACION);
             Intent i = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(i);
+            if (i.resolveActivity(getPackageManager()) != null) {
+                startActivity(i);
+                tvError.setText("");
+            } else {
+                tvError.setText(CADENA_ERROR);
+            }
         });
 
         btnAlarma.setOnClickListener(view -> {
@@ -71,7 +88,13 @@ public class u3a9aIntentImplicitos extends AppCompatActivity {
                     putExtra(AlarmClock.EXTRA_MESSAGE, mensaje).
                     putExtra(AlarmClock.EXTRA_HOUR, hour).
                     putExtra(AlarmClock.EXTRA_MINUTES, minutes);
-            startActivity(i);
+            if (i.resolveActivity(getPackageManager()) != null) {
+                startActivity(i);
+                tvError.setText("");
+            } else {
+                tvError.setText(CADENA_ERROR);
+            }
+
         });
     }
 }

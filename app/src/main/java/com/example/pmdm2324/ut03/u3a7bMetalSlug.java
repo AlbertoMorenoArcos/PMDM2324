@@ -33,6 +33,7 @@ public class u3a7bMetalSlug extends AppCompatActivity {
         tvPersonaje2 = findViewById(R.id.tvPersonaje2);
         tvPersonaje3 = findViewById(R.id.tvPersonaje3);
         btLimpiar = findViewById(R.id.u3a7bidbtLimpiar);
+
         String nombrePersonaje = getIntent().getStringExtra(u3a7aMetalSlug.NOMBRE_PERSONAJE);
         if(nombrePersonaje.equals("Eri")){
             imgbtEri.setEnabled(false);

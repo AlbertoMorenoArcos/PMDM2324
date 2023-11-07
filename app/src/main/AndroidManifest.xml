@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!--
+        <permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="ReservedSystemPermission" />
+    -->
     <queries>
         <intent>
-            <action android:name="android.intent.action.DIAL"/>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.WEB_SEARCH" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SET_ALARM" />
         </intent>
     </queries>
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -23,6 +34,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PMDM2324"
         tools:targetApi="31">
+        <activity
+            android:name=".ut03.u3a8bMonstruoObjetos"
+            android:exported="false" />
+        <activity
+            android:name=".ut03.u3a8aMonstruoObjetos"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ut03.u3a9aIntentImplicitos"
             android:exported="true">
@@ -52,13 +75,13 @@
             android:exported="false" />
         <activity
             android:name=".ut03.u3a6aAnalisisLetras"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ut03.u3a5bFibonacci"
             android:exported="false" />
         <activity
             android:name=".ut03.u3a5aFibonacci"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ut03.u3a4bCalentamiento"
             android:exported="false" />

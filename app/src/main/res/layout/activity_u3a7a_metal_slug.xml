@@ -12,7 +12,7 @@
         android:id="@+id/jugador1"
         android:layout_width="142dp"
         android:layout_height="36dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:text="Jugador 1"
         android:textAlignment="center"
         android:textColor="#FF0000"
@@ -129,13 +129,42 @@
         android:id="@+id/u3a7aidbtLimpiar"
         android:layout_width="250dp"
         android:layout_height="58dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="#FF0000"
         android:text="Limpiar"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/u3a7aidimgbtArmaJugador2"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/u3a7aidimgbtJugador2"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7aidimgbtJugador2" />
+
+    <TextView
+        android:id="@+id/u3a7aidtvNombreJ1"
+        android:layout_width="116dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="13dp"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textColorHighlight="#FF0000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7aidimgbtJugador1"
+        app:layout_constraintStart_toStartOf="@+id/u3a7aidimgbtJugador1"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7aidimgbtJugador1" />
+
+    <TextView
+        android:id="@+id/u3a7aidtvNombreJ2"
+        android:layout_width="116dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="7dp"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textColorHighlight="#FF0000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7aidimgbtJugador2"
         app:layout_constraintStart_toStartOf="@+id/u3a7aidimgbtJugador2"
         app:layout_constraintTop_toBottomOf="@+id/u3a7aidimgbtJugador2" />
 
