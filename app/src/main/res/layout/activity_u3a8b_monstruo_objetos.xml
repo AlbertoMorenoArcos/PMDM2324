@@ -24,13 +24,12 @@
         android:id="@+id/u3a8bidtvMonstruo"
         android:layout_width="246dp"
         android:layout_height="390dp"
-        android:layout_marginTop="68dp"
-        android:text="TextView"
+        android:layout_marginTop="88dp"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
-        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
