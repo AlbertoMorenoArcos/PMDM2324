@@ -69,7 +69,9 @@ public class ut04f1_HolaMundo extends Fragment {
         View layout = inflater.inflate(R.layout.ut04f1__hola_mundo, container, false);
         tvHola = layout.findViewById(R.id.ut04f1idtvHola);
         tvHola.setOnClickListener((View V)->{
-            tvHola.setBackgroundColor(Color.rgb((int)(Math.random()*COLOR_RANGE) ,(int)(Math.random()*COLOR_RANGE), (int)(Math.random()*COLOR_RANGE)));
+            tvHola.setBackgroundColor(Color.rgb((int)(Math.random()*COLOR_RANGE),
+                    (int)(Math.random()*COLOR_RANGE),
+                    (int)(Math.random()*COLOR_RANGE)));
                 });
         return layout;
     }
