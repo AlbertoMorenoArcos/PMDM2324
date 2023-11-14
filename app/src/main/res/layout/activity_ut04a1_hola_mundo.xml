@@ -10,7 +10,7 @@
         android:id="@+id/fragmentContainerView"
         android:name="com.example.pmdm2324.ut04.ut04f1_HolaMundo"
         android:layout_width="205dp"
-        android:layout_height="360dp"
+        android:layout_height="365dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -18,9 +18,27 @@
         android:id="@+id/fragmentContainerView2"
         android:name="com.example.pmdm2324.ut04.ut04f1_HolaMundo"
         android:layout_width="205dp"
-        android:layout_height="360dp"
+        android:layout_height="365dp"
         app:layout_constraintBottom_toBottomOf="@+id/fragmentContainerView"
         app:layout_constraintStart_toEndOf="@+id/fragmentContainerView"
         app:layout_constraintTop_toTopOf="@+id/fragmentContainerView"
         app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView3"
+        android:name="com.example.pmdm2324.ut04.ut04f1_HolaMundo"
+        android:layout_width="205dp"
+        android:layout_height="365dp"
+        app:layout_constraintEnd_toEndOf="@+id/fragmentContainerView"
+        app:layout_constraintStart_toStartOf="@+id/fragmentContainerView"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView4"
+        android:name="com.example.pmdm2324.ut04.ut04f1_HolaMundo"
+        android:layout_width="205dp"
+        android:layout_height="365dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fragmentContainerView"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
