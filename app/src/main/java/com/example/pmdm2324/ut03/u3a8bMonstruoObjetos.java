@@ -17,10 +17,13 @@ public class u3a8bMonstruoObjetos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_u3a8b_monstruo_objetos);
         tvMonstruo = findViewById(R.id.u3a8bidtvMonstruo);
+        tvNombreMonstruo = findViewById(R.id.u3a8bidtvnomMonstruo);
 
         Intent intent = getIntent();
         Monstruo monstruito = (Monstruo) intent.getSerializableExtra(Monstruo.CLAVE_MONSTRUO);
         String color = monstruito.getColor();
+        String nombre = monstruito.getNombre();
+        tvNombreMonstruo.setText(nombre);
         tvMonstruo.setText(monstruito.toString());
         tvMonstruo.setTextColor(Color.parseColor(color));
     }
