@@ -50,17 +50,10 @@ public class u3a6bAnalisisLetras extends AppCompatActivity {
         Collections
                 .sort(lista, (o1, o2) -> o2.getValue()
                         .compareTo(o1.getValue()));
-        /*Collections.sort(lista, new Comparator<Map.Entry<Character, Integer>>() {
-            public int compare(Map.Entry<Character, Integer> o1, Map.Entry<Character, Integer> o2) {
-                return o2.getValue().compareTo(o1.getValue());
-            }
-        });*/
+
         // Mostrar todas las letras y sus recuentos en el TextView
         StringBuilder sb = new StringBuilder();
-        /*Utilizando un bucle for-each tradicional:
-        for (Map.Entry<Character, Integer> entry : lista) {
-            sb.append("Letra "+ entry.getKey()).append(": ").append(entry.getValue()).append("\n");
-        }*/
+
         //utilizando el método forEach de la interfaz Map:
         lista.forEach(entry -> sb.append("Letra ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n"));
 
