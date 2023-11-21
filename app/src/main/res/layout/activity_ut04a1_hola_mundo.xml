@@ -7,40 +7,46 @@
     tools:context=".ut04.ut04a1_HolaMundo">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/ut0401idfragment1"
         android:name="com.example.pmdm2324.ut04.ut04f1_HolaMundo"
-        android:layout_width="205dp"
-        android:layout_height="365dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView3"
+        app:layout_constraintEnd_toStartOf="@+id/fragmentContainerView2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
         android:name="com.example.pmdm2324.ut04.ut04f1_HolaMundo"
-        android:layout_width="205dp"
-        android:layout_height="365dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fragmentContainerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/fragmentContainerView"
-        app:layout_constraintTop_toTopOf="@+id/fragmentContainerView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ut0401idfragment1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView3"
         android:name="com.example.pmdm2324.ut04.ut04f1_HolaMundo"
-        android:layout_width="205dp"
-        android:layout_height="365dp"
-        app:layout_constraintEnd_toEndOf="@+id/fragmentContainerView"
-        app:layout_constraintStart_toStartOf="@+id/fragmentContainerView"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fragmentContainerView4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut0401idfragment1" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView4"
         android:name="com.example.pmdm2324.ut04.ut04f1_HolaMundo"
-        android:layout_width="205dp"
-        android:layout_height="365dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fragmentContainerView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/fragmentContainerView3"
-        app:layout_constraintTop_toTopOf="@+id/fragmentContainerView3" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

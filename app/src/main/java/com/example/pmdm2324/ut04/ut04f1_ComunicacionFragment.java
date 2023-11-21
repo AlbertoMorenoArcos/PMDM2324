@@ -2,22 +2,21 @@ package com.example.pmdm2324.ut04;
 
 import android.graphics.Color;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
 import com.example.pmdm2324.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ut04f1_HolaMundo#newInstance} factory method to
+ * Use the {@link ut04f1_ComunicacionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ut04f1_HolaMundo extends Fragment {
+public class ut04f1_ComunicacionFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +28,7 @@ public class ut04f1_HolaMundo extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ut04f1_HolaMundo() {
+    public ut04f1_ComunicacionFragment() {
         // Required empty public constructor
     }
 
@@ -42,8 +41,8 @@ public class ut04f1_HolaMundo extends Fragment {
      * @return A new instance of fragment ut04f1_HolaMundo.
      */
     // TODO: Rename and change types and number of parameters
-    public static ut04f1_HolaMundo newInstance(String param1, String param2) {
-        ut04f1_HolaMundo fragment = new ut04f1_HolaMundo();
+    public static ut04f1_ComunicacionFragment newInstance(String param1, String param2) {
+        ut04f1_ComunicacionFragment fragment = new ut04f1_ComunicacionFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,19 +59,47 @@ public class ut04f1_HolaMundo extends Fragment {
         }
     }
 
-    TextView tvHola;
+    TextView tvComunicacion;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View layout = inflater.inflate(R.layout.ut04f1__hola_mundo, container, false);
-        tvHola = layout.findViewById(R.id.ut04f1idtvComunicacion);
-        tvHola.setOnClickListener((View V)->{
-            tvHola.setBackgroundColor(Color.rgb((int)(Math.random()*COLOR_RANGE),
-                    (int)(Math.random()*COLOR_RANGE),
-                    (int)(Math.random()*COLOR_RANGE)));
-                });
+        View layout = inflater.inflate(R.layout.ut04f1_comunicacion_fragment, container, false);
+        tvComunicacion = layout.findViewById(R.id.ut04f1idtvComunicacion);
+        tvComunicacion.setOnClickListener((v) -> {
+            int c = Color.argb(
+                    (int) (Math.random() * COLOR_RANGE),
+                    (int) (Math.random() * COLOR_RANGE),
+                    (int) (Math.random() * COLOR_RANGE),
+                    (int) (Math.random() * COLOR_RANGE)
+            );
+            tvComunicacion.setBackgroundColor(c);
+
+            if (observer != null) {
+                observer.OnColorChange(c);
+            }
+        });
+
         return layout;
+    }
+
+    public void setColor(int a, int r, int g, int b) {
+        tvComunicacion.setBackgroundColor(Color.argb(a, r, g, b));
+    }
+
+    public void setText(String msg) {
+        tvComunicacion.append(msg);
+    }
+
+    public interface ICambioColor {
+        public void OnColorChange(int c);
+    }
+
+    ICambioColor observer;
+
+    public void setColorChangeListener(ICambioColor elQueRecibe) {
+        observer = elQueRecibe;
     }
 }
