@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut04.ut04a2_ConfiguraMonstruo">
+
+    <EditText
+        android:id="@+id/ut4a2idetNombre"
+        android:layout_width="197dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="80dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ut4a2idetNombre"
+        app:layout_constraintEnd_toStartOf="@+id/ut4a2idetNombre"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ut4a2idetNombre"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <EditText
+        android:id="@+id/ut4a2idetExtremidades"
+        android:layout_width="183dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut4a2idetNombre" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extremidades:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ut4a2idetExtremidades"
+        app:layout_constraintEnd_toStartOf="@+id/ut4a2idetExtremidades"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ut4a2idetExtremidades" />
+
+    <EditText
+        android:id="@+id/ut4a2idetColor"
+        android:layout_width="187dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="80dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut4a2idetExtremidades" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ut4a2idetColor"
+        app:layout_constraintEnd_toStartOf="@+id/ut4a2idetColor"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ut4a2idetColor" />
+
+    <Button
+        android:id="@+id/ut4a2idbtCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Crear Monstruos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut4a2idetColor" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ut4a2idFrMonstruo1"
+        android:name="com.example.pmdm2324.ut04.ut04f2_ConfiguraMonstruo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/ut4a2idFrMonstruo3"
+        app:layout_constraintEnd_toStartOf="@+id/ut4a2idFrMonstruo2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut4a2idbtCrear" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ut4a2idFrMonstruo2"
+        android:name="com.example.pmdm2324.ut04.ut04f2_ConfiguraMonstruo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/ut4a2idFrMonstruo4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ut4a2idFrMonstruo1"
+        app:layout_constraintTop_toBottomOf="@+id/ut4a2idbtCrear" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ut4a2idFrMonstruo3"
+        android:name="com.example.pmdm2324.ut04.ut04f2_ConfiguraMonstruo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ut4a2idFrMonstruo4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut4a2idFrMonstruo1" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ut4a2idFrMonstruo4"
+        android:name="com.example.pmdm2324.ut04.ut04f2_ConfiguraMonstruo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ut4a2idFrMonstruo3"
+        app:layout_constraintTop_toBottomOf="@+id/ut4a2idFrMonstruo2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

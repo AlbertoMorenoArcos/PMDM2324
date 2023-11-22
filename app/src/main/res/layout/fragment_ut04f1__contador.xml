@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut04.ut04f1_Contador">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/ut04f1idtvContador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</FrameLayout>
