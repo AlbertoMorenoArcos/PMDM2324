@@ -70,10 +70,10 @@ public class ut04a2_ConfiguraMonstruo extends AppCompatActivity implements Adapt
 
         });
         spMonstruo.setOnItemSelectedListener(this);
-        String[] recipientes = {"Monstruo 1", "Monstruo 2", "Monstruo 3", "Monstruo 4"};
+        String[] monstruos = {"Monstruo 1", "Monstruo 2", "Monstruo 3", "Monstruo 4"};
         // Create the instance of ArrayAdapter
         // having the list of courses
-        ArrayAdapter ad = new ArrayAdapter(this, android.R.layout.simple_spinner_item, recipientes);
+        ArrayAdapter ad = new ArrayAdapter(this, android.R.layout.simple_spinner_item, monstruos);
 
         // set simple layout resource file
         // for each item of spinner
@@ -82,8 +82,6 @@ public class ut04a2_ConfiguraMonstruo extends AppCompatActivity implements Adapt
         // Set the ArrayAdapter (ad) data on the
         // Spinner which binds data to spinner
         spMonstruo.setAdapter(ad);
-
-
     }
     // Performing action when ItemSelected
     // from spinner, Overriding onItemSelected method
@@ -91,7 +89,6 @@ public class ut04a2_ConfiguraMonstruo extends AppCompatActivity implements Adapt
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         monstruoSeleccionado = spMonstruo.getItemAtPosition(i).toString();
-
     }
 
     @Override
