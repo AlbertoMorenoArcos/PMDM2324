@@ -58,7 +58,7 @@ public class ut04a2_ConfiguraMonstruo extends AppCompatActivity implements Adapt
                 monstruo3.setText(miMonstruo.toString());
                 monstruo3.setColor(color);
                 tvError.setText("");
-            } else if (monstruoSeleccionado.equals("Monstruo 3")) {
+            } else if (monstruoSeleccionado.equals("Monstruo 4")) {
                 monstruo4.setText(miMonstruo.toString());
                 monstruo4.setColor(color);
                 tvError.setText("");
