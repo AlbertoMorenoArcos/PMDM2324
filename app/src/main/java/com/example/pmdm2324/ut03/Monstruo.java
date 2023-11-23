@@ -36,7 +36,7 @@ public class Monstruo implements Serializable {
     public String toString() {
         StringBuilder monstruo = new StringBuilder();
 
-
+        monstruo.append(nombre+"\n");
         // Dibujar el monstruo con ASCII art
         monstruo.append("*\n");
 
