@@ -37,8 +37,6 @@ public class ut04a3_PartidosPingPong extends AppCompatActivity {
         partido3 = (ut04f3_PingPongFragment) getSupportFragmentManager().findFragmentById(R.id.ut4a3idfrPartido3);
         partido4 = (ut04f3_PingPongFragment) getSupportFragmentManager().findFragmentById(R.id.ut4a3idfrPartido4);
 
-
-
         btIniciar.setOnClickListener((View v) -> {
             partido1.setText("Partido 1");
             partido2.setText("Partido 2");
@@ -63,7 +61,7 @@ public class ut04a3_PartidosPingPong extends AppCompatActivity {
             partido3.setMarcador(MARCADOR_INICIAL, MARCADOR_INICIAL);
             partido4.setMarcador(MARCADOR_INICIAL, MARCADOR_INICIAL);
         });
-        if (btIniciar.isPressed()) {
+
             partido1.setCambiarDatosListener(
                     (String JGanador, String marcador) -> {
                         tvGanador1.setText(String.valueOf(JGanador));
@@ -87,11 +85,6 @@ public class ut04a3_PartidosPingPong extends AppCompatActivity {
                         tvResultado4.setText(String.valueOf(marcador));
                     }
             );
-
-
-        }
-
-
     }
 
     @Override
