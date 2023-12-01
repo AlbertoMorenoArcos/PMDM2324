@@ -181,6 +181,7 @@
         </activity>
         <activity
             android:name=".ut02.u2a6PiedraPapelTijeras"
+            android:configChanges="orientation|screenSize"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

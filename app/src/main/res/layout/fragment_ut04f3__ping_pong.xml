@@ -1,92 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ut04.ut04f3_PingPongFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/textView33"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="#000000"
-        android:backgroundTint="#000000" />
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/ut04f1idbtJugador1"
-            android:layout_width="220dp"
-            android:layout_height="73dp"
-            android:layout_marginTop="32dp"
+            android:id="@+id/ut04f3idbtJugador1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:backgroundTint="#FF0000"
-            android:text="Punto jugador 1"
+            android:text="0"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ut04f1idtvJugador1" />
+            app:layout_constraintEnd_toEndOf="@+id/ut04f3idtvPartido"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ut04f3idtvPartido"
+            tools:layout_editor_absoluteY="284dp" />
 
         <Button
-            android:id="@+id/ut04f1idbtJugador2"
-            android:layout_width="220dp"
-            android:layout_height="73dp"
-            android:layout_marginTop="32dp"
+            android:id="@+id/ut04f3idbtJugador2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:backgroundTint="#FF0000"
-            android:text="Punto jugador 2"
+            android:text="0"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ut04f1idtvJugador2"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintEnd_toEndOf="@+id/ut04f3idbtJugador1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ut04f3idbtJugador1"
+            app:layout_constraintTop_toBottomOf="@+id/ut04f3idbtJugador1"
+            app:layout_constraintVertical_bias="0.251" />
 
         <TextView
-            android:id="@+id/ut04f1idtvJugador2"
+            android:id="@+id/ut04f3idtvPartido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
-            android:text="0"
-            android:textColor="#FF0000"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ut04f1idbtJugador1" />
-
-        <TextView
-            android:id="@+id/ut04f1idtvJugador1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
-            android:text="0"
-            android:textColor="#FF0000"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ut04f1idtvPartido" />
-
-        <TextView
-            android:id="@+id/ut04f1idtvPartido"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="88dp"
+            android:layout_marginTop="56dp"
             android:text="Partido X"
             android:textColor="#FF0000"
-            android:textSize="34sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

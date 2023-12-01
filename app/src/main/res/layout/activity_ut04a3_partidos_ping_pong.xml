@@ -6,48 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".ut04.ut04a3_PartidosPingPong">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/ut4a2idfrPartido1"
-        android:name="com.example.pmdm2324.ut04.ut04f3_PingPongFragment"
+    <TextView
+        android:id="@+id/ut04f1idtvResultadoPartido4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:layout_marginTop="10dp"
+        android:text="0-0"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ut04f1idtvResultadoPartido3"
+        app:layout_constraintStart_toStartOf="@+id/ut04f1idtvResultadoPartido3"
+        app:layout_constraintTop_toBottomOf="@+id/ut04f1idtvResultadoPartido3" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/ut4a2idfrPartido2"
-        android:name="com.example.pmdm2324.ut04.ut04f3_PingPongFragment"
+    <TextView
+        android:id="@+id/ut04f1idtvResultadoPartido3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="411dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:layout_marginTop="10dp"
+        android:text="0-0"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ut04f1idtvResultadoPartido2"
+        app:layout_constraintStart_toStartOf="@+id/ut04f1idtvResultadoPartido2"
+        app:layout_constraintTop_toBottomOf="@+id/ut04f1idtvResultadoPartido2" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/ut4a2idfrPartido3"
+        android:id="@+id/ut4a3idfrPartido1"
         android:name="com.example.pmdm2324.ut04.ut04f3_PingPongFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/ut4a3idfrPartido3"
+        app:layout_constraintEnd_toStartOf="@+id/ut4a3idfrPartido2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut04f1idbtResetear" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/ut4a2idfrPartido4"
+        android:id="@+id/ut4a3idfrPartido2"
         android:name="com.example.pmdm2324.ut04.ut04f3_PingPongFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="411dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/ut4a3idfrPartido4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ut4a3idfrPartido1"
+        app:layout_constraintTop_toBottomOf="@+id/ut04f1idbtResetear" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ut4a3idfrPartido4"
+        android:name="com.example.pmdm2324.ut04.ut04f3_PingPongFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ut4a3idfrPartido3"
+        app:layout_constraintTop_toBottomOf="@+id/ut4a3idfrPartido2" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ut4a3idfrPartido3"
+        android:name="com.example.pmdm2324.ut04.ut04f3_PingPongFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ut4a3idfrPartido4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut4a3idfrPartido1" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/ut04f1idbtResetear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="341dp" />
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#FF0000"
+        android:text="Resetear"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ut04f1idtvResultadoPartido4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ut04f1idbtIniciar"
+        app:layout_constraintTop_toBottomOf="@+id/ut04f1idtvGanadorPartido4" />
+
+    <Button
+        android:id="@+id/ut04f1idbtIniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#FF0000"
+        android:text="Iniciar"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ut04f1idtvPartido4"
+        app:layout_constraintTop_toBottomOf="@+id/ut04f1idtvGanadorPartido4" />
 
     <TextView
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="32dp"
         android:text="Partido"
         android:textColor="#FF0000"
@@ -187,5 +250,31 @@
         app:layout_constraintEnd_toEndOf="@+id/ut04f1idtvGanadorPartido3"
         app:layout_constraintStart_toStartOf="@+id/ut04f1idtvGanadorPartido3"
         app:layout_constraintTop_toBottomOf="@+id/ut04f1idtvGanadorPartido3" />
+
+    <TextView
+        android:id="@+id/ut04f1idtvResultadoPartido1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="0-0"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView32"
+        app:layout_constraintStart_toStartOf="@+id/textView32"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <TextView
+        android:id="@+id/ut04f1idtvResultadoPartido2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="0-0"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ut04f1idtvResultadoPartido1"
+        app:layout_constraintStart_toStartOf="@+id/ut04f1idtvResultadoPartido1"
+        app:layout_constraintTop_toBottomOf="@+id/ut04f1idtvResultadoPartido1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
