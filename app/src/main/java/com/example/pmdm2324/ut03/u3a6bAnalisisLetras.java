@@ -19,11 +19,12 @@ import java.util.Map;
 public class u3a6bAnalisisLetras extends AppCompatActivity {
 
     public static final String CLAVE_ANALISIS = "letrascontadas";
-    private static  final int LETRAS_A_PASAR = 3;
+    private static final int LETRAS_A_PASAR = 3;
 
     LinkedHashMap<Character, Integer> mapa = new LinkedHashMap<>();
     TextView tvLetras;
     Button btFinAnalisis;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,9 +48,7 @@ public class u3a6bAnalisisLetras extends AppCompatActivity {
         }
         // Ordena la lista de acuerdo a la frecuencia de las letras
         List<Map.Entry<Character, Integer>> lista = new ArrayList<>(mapa.entrySet());
-        Collections
-                .sort(lista, (o1, o2) -> o2.getValue()
-                        .compareTo(o1.getValue()));
+        Collections.sort(lista, (o1, o2) -> o2.getValue().compareTo(o1.getValue()));
 
         // Mostrar todas las letras y sus recuentos en el TextView
         StringBuilder sb = new StringBuilder();

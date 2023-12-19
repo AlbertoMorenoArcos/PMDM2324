@@ -42,9 +42,6 @@ public class u3a4aCalentamiento extends AppCompatActivity {
                             tvMensaje.setText("Has aceptado el nombre dejandolo en blanco.");
                             tvMensaje.setTextColor(Color.RED);
                         }
-
-
-
                     } else if (result.getResultCode() == Activity.RESULT_CANCELED){
                         tvMensaje.setText("El usuario ha cancelado cancelado");
                         tvMensaje.setTextColor(Color.RED);
@@ -58,7 +55,6 @@ public class u3a4aCalentamiento extends AppCompatActivity {
                     }
                 }
         );
-
         btObtenerNombre.setOnClickListener(view->{
             Intent i = new Intent(this, u3a4bCalentamiento.class);
             lanzador.launch(i);

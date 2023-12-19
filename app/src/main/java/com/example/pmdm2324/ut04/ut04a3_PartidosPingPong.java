@@ -1,5 +1,6 @@
 package com.example.pmdm2324.ut04;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.pmdm2324.R;
+import com.example.pmdm2324.ut02.u2a6PiedraPapelTijeras;
 
 public class ut04a3_PartidosPingPong extends AppCompatActivity {
 
@@ -62,34 +64,35 @@ public class ut04a3_PartidosPingPong extends AppCompatActivity {
             partido4.setMarcador(MARCADOR_INICIAL, MARCADOR_INICIAL);
         });
 
-            partido1.setCambiarDatosListener(
-                    (String JGanador, String marcador) -> {
-                        tvGanador1.setText(String.valueOf(JGanador));
-                        tvResultado1.setText(String.valueOf(marcador));
-                    });
-            partido2.setCambiarDatosListener(
-                    (String JGanador, String marcador) -> {
-                        tvGanador2.setText(String.valueOf(JGanador));
-                        tvResultado2.setText(String.valueOf(marcador));
-                    }
-            );
-            partido3.setCambiarDatosListener(
-                    (String JGanador, String marcador) -> {
-                        tvGanador3.setText(String.valueOf(JGanador));
-                        tvResultado3.setText(String.valueOf(marcador));
-                    }
-            );
-            partido4.setCambiarDatosListener(
-                    (String JGanador, String marcador) -> {
-                        tvGanador4.setText(String.valueOf(JGanador));
-                        tvResultado4.setText(String.valueOf(marcador));
-                    }
-            );
+
+        partido1.setCambiarDatosListener(
+                (String JGanador, String marcador) -> {
+                    tvGanador1.setText(String.valueOf(JGanador));
+                    tvResultado1.setText(String.valueOf(marcador));
+                });
+        partido2.setCambiarDatosListener(
+                (String JGanador, String marcador) -> {
+                    tvGanador2.setText(String.valueOf(JGanador));
+                    tvResultado2.setText(String.valueOf(marcador));
+                }
+        );
+        partido3.setCambiarDatosListener(
+                (String JGanador, String marcador) -> {
+                    tvGanador3.setText(String.valueOf(JGanador));
+                    tvResultado3.setText(String.valueOf(marcador));
+                }
+        );
+        partido4.setCambiarDatosListener(
+                (String JGanador, String marcador) -> {
+                    tvGanador4.setText(String.valueOf(JGanador));
+                    tvResultado4.setText(String.valueOf(marcador));
+                }
+        );
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
     }
 }

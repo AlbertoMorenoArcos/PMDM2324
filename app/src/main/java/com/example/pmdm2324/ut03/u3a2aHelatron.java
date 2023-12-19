@@ -56,9 +56,6 @@ public class u3a2aHelatron extends AppCompatActivity implements AdapterView.OnIt
             }else{
                 tvError.setText("Rellena todos los datos.");
             }
-
-
-
         });
 
         spRecipiente.setOnItemSelectedListener(this);

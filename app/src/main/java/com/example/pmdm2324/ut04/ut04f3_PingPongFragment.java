@@ -54,11 +54,11 @@ public class ut04f3_PingPongFragment extends Fragment {
         return fragment;
     }
 
-    Button btPuntoJugador1, btPuntoJugador2, btResetear;
+    Button btPuntoJugador1, btPuntoJugador2;
     TextView tvPartido;
 
-    int contadorJ1=0;
-    int contadorJ2=0;
+    int contadorJ1 = 0;
+    int contadorJ2 = 0;
 
 
     @Override
@@ -80,11 +80,11 @@ public class ut04f3_PingPongFragment extends Fragment {
         btPuntoJugador2 = layout.findViewById(R.id.ut04f3idbtJugador2);
         tvPartido = layout.findViewById(R.id.ut04f3idtvPartido);
 
-        btPuntoJugador1.setOnClickListener((View v)->{
+        btPuntoJugador1.setOnClickListener((View v) -> {
             contadorJ1++;
             String puntosJ1 = String.valueOf(contadorJ1);
             btPuntoJugador1.setText(puntosJ1);
-            if(contadorJ1 >= PUNTUACION_FINAL && contadorJ1 > contadorJ2+DIFERENCIA){
+            if (contadorJ1 >= PUNTUACION_FINAL && contadorJ1 > contadorJ2 + DIFERENCIA) {
                 btPuntoJugador1.setEnabled(false);
                 btPuntoJugador2.setEnabled(false);
                 String ptsJ1 = btPuntoJugador1.getText().toString();
@@ -96,11 +96,11 @@ public class ut04f3_PingPongFragment extends Fragment {
                 }
             }
         });
-        btPuntoJugador2.setOnClickListener((View v)->{
+        btPuntoJugador2.setOnClickListener((View v) -> {
             contadorJ2++;
             String puntosJ2 = String.valueOf(contadorJ2);
             btPuntoJugador2.setText(puntosJ2);
-            if(contadorJ2 >= PUNTUACION_FINAL && contadorJ2 > contadorJ1+DIFERENCIA){
+            if (contadorJ2 >= PUNTUACION_FINAL && contadorJ2 > contadorJ1 + DIFERENCIA) {
                 btPuntoJugador1.setEnabled(false);
                 btPuntoJugador2.setEnabled(false);
                 String ptsJ1 = btPuntoJugador1.getText().toString();
@@ -112,17 +112,19 @@ public class ut04f3_PingPongFragment extends Fragment {
                 }
             }
         });
-
-
-
         return layout;
     }
-    public void setText(String msg) {tvPartido.setText(msg);}
-    public void setButtonEnabled(Boolean enabled){
+
+    public void setText(String msg) {
+        tvPartido.setText(msg);
+    }
+
+    public void setButtonEnabled(Boolean enabled) {
         btPuntoJugador1.setEnabled(enabled);
         btPuntoJugador2.setEnabled(enabled);
     }
-    public void setMarcador(int marcJ1, int marcJ2){
+
+    public void setMarcador(int marcJ1, int marcJ2) {
         btPuntoJugador1.setText(String.valueOf(marcJ1));
         btPuntoJugador2.setText(String.valueOf(marcJ2));
         contadorJ1 = marcJ1;
@@ -130,7 +132,7 @@ public class ut04f3_PingPongFragment extends Fragment {
     }
 
     public interface FinPartido {
-        public void CambiarDatos(String JGanador, String marcador);
+        void CambiarDatos(String JGanador, String marcador);
     }
 
     FinPartido observer;
@@ -138,4 +140,5 @@ public class ut04f3_PingPongFragment extends Fragment {
     public void setCambiarDatosListener(FinPartido objetoReceptor) {
         observer = objetoReceptor;
     }
+
 }
