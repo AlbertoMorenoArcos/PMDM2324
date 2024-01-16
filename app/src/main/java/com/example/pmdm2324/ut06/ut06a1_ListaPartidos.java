@@ -7,7 +7,7 @@ import android.os.Bundle;
 import com.example.pmdm2324.R;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.View;
+
 import android.widget.Button;
 
     public class ut06a1_ListaPartidos extends AppCompatActivity {
@@ -20,7 +20,7 @@ import android.widget.Button;
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_ut06a1_lista_partidos);
 
-            reyclerViewUser = (RecyclerView) findViewById(R.id.ut06a1_ListaContenedor);
+            reyclerViewUser = (RecyclerView) findViewById(R.id.ut06a2_ListaContenedorEstadios);
 
             LinearLayoutManager layoutManager = new LinearLayoutManager(this.getApplicationContext());
             reyclerViewUser.setLayoutManager(layoutManager);
@@ -28,7 +28,7 @@ import android.widget.Button;
             adapter = new ut06a1_PartidoAdapter(ut06a1_Partido.generatePartidos(ut06a1_Partido.PARTIDOS_INICIALES));
             reyclerViewUser.setAdapter(adapter);
 
-            add = findViewById(R.id.ut06a1_idListaAdd);
+            add = findViewById(R.id.ut06a2_btAñadir);
             add.setOnClickListener(view -> adapter.add(ut06a1_Partido.generatePartidos(ut06a1_Partido.PARTIDOS_INICIALES)));
 
             //adapter.notifyDataSetChanged();

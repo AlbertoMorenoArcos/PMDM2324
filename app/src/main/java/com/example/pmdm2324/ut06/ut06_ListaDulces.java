@@ -19,7 +19,7 @@ public class ut06_ListaDulces extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ut06a1_lista_partidos);
 
-        reyclerViewUser = (RecyclerView) findViewById(R.id.ut06a1_ListaContenedor);
+        reyclerViewUser = (RecyclerView) findViewById(R.id.ut06a2_ListaContenedorEstadios);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this.getApplicationContext());
         reyclerViewUser.setLayoutManager(layoutManager);
@@ -27,7 +27,7 @@ public class ut06_ListaDulces extends AppCompatActivity {
         adapter = new ut06_DulcesAdapter(ut06_DulcesNavideños.generateDulces(ut06_DulcesNavideños.DULCES_INICIALES));
         reyclerViewUser.setAdapter(adapter);
 
-        add = findViewById(R.id.ut06a1_idListaAdd);
+        add = findViewById(R.id.ut06a2_btAñadir);
         add.setOnClickListener(view -> adapter.add(ut06_DulcesNavideños.generateDulces(ut06_DulcesNavideños.DULCES_INICIALES)));
 
         //adapter.notifyDataSetChanged();

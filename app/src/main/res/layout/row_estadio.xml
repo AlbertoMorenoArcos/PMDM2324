@@ -9,18 +9,28 @@
         android:id="@+id/ut06a2_ListaNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Altramuces" />
+        android:background="#8BC34A"
+        android:text="Santiago Bernabeu"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/ut06a2_ListaAficionados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="500" />
+        android:background="#000000"
+        android:text="85000"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/ut06a2_ListaNacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No" />
+        android:background="#000000"
+        android:text="España"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

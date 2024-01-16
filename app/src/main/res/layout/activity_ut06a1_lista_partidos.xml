@@ -7,16 +7,16 @@
     tools:context=".ut06.ut06a1_ListaPartidos">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ut06a1_ListaContenedor"
+        android:id="@+id/ut06a2_ListaContenedorEstadios"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/ut06a1_idListaAdd"
+        app:layout_constraintBottom_toTopOf="@+id/ut06a2_btAñadir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/ut06a1_idListaAdd"
+        android:id="@+id/ut06a2_btAñadir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
