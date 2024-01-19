@@ -18,7 +18,7 @@ public class ut06a2_EstadioAdapter extends RecyclerView.Adapter<ut06a2_EstadioAd
      * Relacionado con el evento.
      */
     public interface ItemClickListener {
-        void onClick(View view, int position, ut06a2_Estadio producto);
+        void onClick(View view, int position, ut06a2_Estadio estadio);
     }
 
     private ItemClickListener clickListener;

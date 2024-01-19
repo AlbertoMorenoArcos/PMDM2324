@@ -29,10 +29,9 @@ public class ut06a2_ListaEstadios  extends AppCompatActivity {
         a.setClickListener(new ut06a2_EstadioAdapter.ItemClickListener() {
             @Override
             public void onClick(View view, int position, ut06a2_Estadio estadio) {
-                ut06a2_Estadio miEstadio = new ut06a2_Estadio(estadio.getNombre(), estadio.getN_Aficionados(), estadio.getNacion(), estadio.getEquipo(), estadio.getCiudad());
 
                 Intent i = new Intent(ut06a2_ListaEstadios.this, ut06a2b_MostrarEstadio.class);
-                i.putExtra(ut06a2_Estadio.CLAVE_ESTADIO, miEstadio);
+                i.putExtra(ut06a2_Estadio.CLAVE_ESTADIO, estadio);
                 startActivity(i);
             }
         });
