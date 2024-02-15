@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut08.ut08a2_suma">
+
+    <Button
+        android:id="@+id/ut08a3_idbtJugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a3_idpbCargando" />
+
+    <TextView
+        android:id="@+id/ut08a3_idtvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/ut08a3_idpbCargando"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a3_idpbCargando"
+        app:layout_constraintStart_toStartOf="@+id/ut08a3_idpbCargando"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a3_idtvNMaquina" />
+
+    <ProgressBar
+        android:id="@+id/ut08a3_idpbCargando"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/ut08a3_idbtJugar"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a3_idbtJugar"
+        app:layout_constraintStart_toStartOf="@+id/ut08a3_idbtJugar"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a3_idtvResultado" />
+
+    <EditText
+        android:id="@+id/ut08a3_idetNJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:ems="10"
+        android:hint="Numero 1"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ut08a3_idtvNMaquina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ut08a3_idtvResultado"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a3_idtvResultado"
+        app:layout_constraintStart_toStartOf="@+id/ut08a3_idtvResultado"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="159dp"
+        android:layout_height="57dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/ut08a3_idtvNMaquina"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a3_idtvNMaquina"
+        app:layout_constraintStart_toStartOf="@+id/ut08a3_idtvNMaquina"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a3_idetNJugador">
+
+        <RadioButton
+            android:id="@+id/ut08a3_idrbPares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pares" />
+
+        <RadioButton
+            android:id="@+id/ut08a3_idrbNones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nones" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
