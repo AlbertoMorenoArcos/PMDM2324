@@ -42,9 +42,9 @@ public class ut06a2_EstadioAdapter extends RecyclerView.Adapter<ut06a2_EstadioAd
             super(view);
             // Define click listener for the ViewHolder's View
 
-            nombre = (TextView) view.findViewById(R.id.ut06a2_ListaNombre);
-            n_aficionados = (TextView) view.findViewById(R.id.ut06a2_ListaAficionados);
-            nacion = (TextView) view.findViewById(R.id.ut06a2_ListaNacion);
+            nombre = (TextView) view.findViewById(R.id.NombrePelicula);
+            n_aficionados = (TextView) view.findViewById(R.id.Descripcion);
+            nacion = (TextView) view.findViewById(R.id.Estrellas);
             view.setOnClickListener(this);
         }
 

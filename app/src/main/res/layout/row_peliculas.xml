@@ -9,28 +9,21 @@
         android:id="@+id/NombrePelicula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#8BC34A"
-        android:text="Santiago Bernabeu"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:text="Nombre"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/Descripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000"
-        android:text="85000"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF" />
+        android:text="Descripcion"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/Estrellas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000"
-        android:text="España"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF" />
+        android:text="Estrellas"
+        android:textAlignment="center" />
 
 </LinearLayout>

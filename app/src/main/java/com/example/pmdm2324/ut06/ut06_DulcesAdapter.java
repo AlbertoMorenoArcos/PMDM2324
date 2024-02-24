@@ -29,9 +29,9 @@ public class ut06_DulcesAdapter extends RecyclerView.Adapter<ut06_DulcesAdapter.
             super(view);
             // Define click listener for the ViewHolder's View
 
-            nombre = (TextView) view.findViewById(R.id.ut06a2_ListaNombre);
-            calorias = (TextView) view.findViewById(R.id.ut06a2_ListaAficionados);
-            fruto_seco = (TextView) view.findViewById(R.id.ut06a2_ListaNacion);
+            nombre = (TextView) view.findViewById(R.id.NombrePelicula);
+            calorias = (TextView) view.findViewById(R.id.Descripcion);
+            fruto_seco = (TextView) view.findViewById(R.id.Estrellas);
         }
 
         public TextView getTextNombre() {

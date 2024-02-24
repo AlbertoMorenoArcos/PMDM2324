@@ -6,19 +6,19 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/ut06a2_ListaNombre"
+        android:id="@+id/NombrePelicula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Altramuces" />
 
     <TextView
-        android:id="@+id/ut06a2_ListaAficionados"
+        android:id="@+id/Descripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="500" />
 
     <TextView
-        android:id="@+id/ut06a2_ListaNacion"
+        android:id="@+id/Estrellas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="No" />
